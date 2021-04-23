@@ -1,0 +1,43 @@
+/* Estilos del tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #5bc0de;
+}
+
+/* Estilos de los Botones */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #23acd6;
+}
+
+.tab button.active {
+  background-color: #23acd6;
+}
+
+/* Estilo del contenido */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Estilo del main */
+main{
+  min-height: calc(100vh - 58px - 361px);
+  color: rgb(0, 0, 0);
+  display: flow-root;
+  align-items: unset;
+  justify-content: unset;
+  padding: 0px 0px; 
+}
