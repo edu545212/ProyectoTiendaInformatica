@@ -89,6 +89,7 @@
 							<span class="carousel-control-next-icon"></span>
 					</a>
 				</div>
+				<p>prueba</p>
 			</div>
 		</div>
         </main>
