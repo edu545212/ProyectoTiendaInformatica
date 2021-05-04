@@ -14,8 +14,8 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
             <a href="index.php" class="nav-item nav-link">Inicio</a>
-            <a href="consolas.php" class="nav-item nav-link">Comparativas</a>
-            <a href="videojuegos.php" class="nav-item nav-link">Tienda Online</a>
+            <a href="comparativas.php" class="nav-item nav-link">Comparativas</a>
+            <a href="tienda.php" class="nav-item nav-link">Tienda Online</a>
         </div>
         <div class="navbar-nav ml-auto">    
             <?php   
