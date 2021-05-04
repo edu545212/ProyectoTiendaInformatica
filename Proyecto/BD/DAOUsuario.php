@@ -19,7 +19,7 @@
 	}
 
 	function insertarUsuarios($conexion, $usuario, $password, $nombre, $apellido1, $apellido2, $telefono, $email, $CP, $provincia, $CA, $DNI, $Direccion){
-		$consulta = "INSERT INTO Usuario VALUES (default, '$usuario', '$password', '$nombre', '$apellido1', '$apellido2', '$telefono', '$email', '$CP', '$provincia', '$CA','$usuario', '$DNI', '$Direccion')";
+		$consulta = "INSERT INTO Usuario VALUES (default, '$usuario', '$password', '$nombre', '$apellido1', '$apellido2', '$telefono', '$email', '$CP', '$provincia', '$CA','usuario', '$DNI', '$Direccion')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
