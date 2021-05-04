@@ -14,8 +14,23 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
             <a href="index.php" class="nav-item nav-link">Inicio</a>
-            <a href="comparativas.php" class="nav-item nav-link">Comparativas</a>
-            <a href="tienda.php" class="nav-item nav-link">Tienda Online</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comparativas</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Procesador</a>
+                    <a class="dropdown-item" href="#">Tarjetas graficas</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tienda Online</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Procesador</a>
+                    <a class="dropdown-item" href="#">Placas Bases</a>
+                    <a class="dropdown-item" href="#">Tarjetas graficas</a>
+                    <a class="dropdown-item" href="#">Memorias RAM</a>
+                    <a class="dropdown-item" href="#">Discos duros</a>
+                </div>
+            </li>
         </div>
         <div class="navbar-nav ml-auto">    
             <?php   
