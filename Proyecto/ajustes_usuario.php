@@ -121,4 +121,4 @@
         <script src="./js/registro.js"></script>
     <?php include './inc/footer.php'; ?>
 </body>
-</html>>
+</html>
