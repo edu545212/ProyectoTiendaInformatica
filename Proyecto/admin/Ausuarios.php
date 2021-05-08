@@ -10,6 +10,10 @@
 <div>
     <a class="btn btn-success" href="./NuevoU.php">Nuevo <i class="fa fa-plus"></i></a>
 </div>
+<div>
+    <label for="caja_busqueda">Buscar:</label>
+    <imput type="text" name="caja_busqueda" id="caja_busqueda"></imput>
+</div>
 <br>
 <table class="table table-striped table-responsive">
     <thead>

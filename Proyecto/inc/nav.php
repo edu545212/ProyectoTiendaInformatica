@@ -24,12 +24,12 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tienda Online</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="../Tienda/Procesadores.php">Procesadores</a>
-                    <a class="dropdown-item" href="../Tienda/PlacasBases.php">Placas Bases</a>
-                    <a class="dropdown-item" href="../Tienda/TarjetasGraficas.php">Tarjetas graficas</a>
-                    <a class="dropdown-item" href="../Tienda/MemoriasRam.php">Memorias RAM</a>
-                    <a class="dropdown-item" href="../Tienda/DiscosDuros.php">Discos duros</a>
-                    <a class="dropdown-item" href="../Tienda/Cajas.php">Cajas</a>
+                    <a class="dropdown-item" href="Procesadores.php">Procesadores</a>
+                    <a class="dropdown-item" href="Tienda/PlacasBases.php">Placas Bases</a>
+                    <a class="dropdown-item" href="TarjetasGraficas.php">Tarjetas graficas</a>
+                    <a class="dropdown-item" href="MemoriasRam.php">Memorias RAM</a>
+                    <a class="dropdown-item" href="DiscosDuros.php">Discos duros</a>
+                    <a class="dropdown-item" href="Cajas.php">Cajas</a>
                 </div>
             </li>
         </div>
