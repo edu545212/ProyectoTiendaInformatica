@@ -104,4 +104,10 @@
 		return $resultado;
 	}
 
+	function campoBuscarUsuario($conexion, $variableBusqueda){
+        $consulta = "SELECT * FROM Usuario WHERE idUsuario LIKE '%$variableBusqueda%' OR Usuario LIKE '%$variableBusqueda%' OR Nombre LIKE '%$variableBusqueda%' OR Apellido1 LIKE '%$variableBusqueda%' OR Apellido2 LIKE '%$variableBusqueda%' OR Telefono LIKE '%$variableBusqueda%' OR Email LIKE '%$variableBusqueda%' OR CP LIKE '%$variableBusqueda%' OR DNI LIKE '%$variableBusqueda%' OR Provincia LIKE '%$variableBusqueda%' OR ComunidadAutonoma LIKE '%$variableBusqueda%' OR Direccion LIKE '%$variableBusqueda%' OR Rol LIKE '%$variableBusqueda%'";
+        $resultado = mysqli_query($conexion, $consulta);
+        return $resultado;
+    }
+
 ?>
