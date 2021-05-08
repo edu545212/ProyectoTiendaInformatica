@@ -13,12 +13,11 @@
 <body>
 
 <div id="loader-wrapper">
-<div id="loader"></div>
-
-<div class="loader-section section-left"></div>
-<div class="loader-section section-right"></div>
-
+	<div id="loader"></div>
+	<div class="loader-section section-left"></div>
+	<div class="loader-section section-right"></div>
 </div>
+
     <?php include './inc/nav.php'; ?>
         <main>
 		<div class="container-fluid row justify-content-center">
