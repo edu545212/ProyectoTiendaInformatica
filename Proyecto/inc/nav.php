@@ -25,7 +25,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tienda Online</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="Procesadores.php">Procesadores</a>
-                    <a class="dropdown-item" href="Tienda/PlacasBases.php">Placas Bases</a>
+                    <a class="dropdown-item" href="PlacasBases.php">Placas Bases</a>
                     <a class="dropdown-item" href="TarjetasGraficas.php">Tarjetas graficas</a>
                     <a class="dropdown-item" href="MemoriasRam.php">Memorias RAM</a>
                     <a class="dropdown-item" href="DiscosDuros.php">Discos duros</a>
