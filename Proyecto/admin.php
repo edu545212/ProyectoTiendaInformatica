@@ -6,13 +6,6 @@
         exit;
     }
 ?>
-<?php
-    require "./BD/conector_bd.php";
-    require "./BD/DAOPlataforma.php";
-    require "./BD/DAOUsuario.php";
-    require "./BD/DAOVideojuegos.php";
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,9 +20,7 @@
             <!-- Tab links -->
             <div class="tab">
             <button class="tablinks" onclick="SeleccionarPanel(event, 'Usuarios')">Usuarios</button>
-            <button class="tablinks" onclick="SeleccionarPanel(event, 'VideojuegosYPlataforma')">Videojuegos Y Plataforma</button>
-            <button class="tablinks" onclick="SeleccionarPanel(event, 'Videojuegos')">Videojuegos</button>
-            <button class="tablinks" onclick="SeleccionarPanel(event, 'Videoconsolas')">Videoconsolas</button>
+            <button class="tablinks" onclick="SeleccionarPanel(event, 'Procesador')">Procesador</button>
             </div>
 
             <!-- Tab content -->
@@ -37,16 +28,8 @@
                 <?php include './admin/Ausuarios.php'; ?>
             </div>
 
-            <div id="VideojuegosYPlataforma" class="tabcontent">
-                <?php include './admin/AvideojuegosYplataforma.php'; ?>
-            </div>
-
-            <div id="Videojuegos" class="tabcontent">
-                <?php include './admin/Avideojuegos.php'; ?>
-            </div>
-
-            <div id="Videoconsolas" class="tabcontent">
-                <?php include './admin/Avideoconsolas.php'; ?>
+            <div id="Procesador" class="tabcontent">
+                <?php include './admin/AProcesador.php'; ?>
             </div>
 
         </main>   

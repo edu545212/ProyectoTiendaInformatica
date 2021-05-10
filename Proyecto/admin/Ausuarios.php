@@ -7,22 +7,19 @@
     }
 ?>
 <section class="principal">
-
-<h1>Usuario</h1>
-<div>
-    <a class="btn btn-success" href="./NuevoVC.php"> Nuevo <i class="fa fa-plus"></i></a>
-</div>
-<br>
-<div class="formulario">
-    <label for="caja_busqueda">Buscar</label>
-    <input type="text" name="caja_busqueda" id="caja_busqueda"></input>
-
+    <h1>Usuario</h1>
     
-</div>
+    <div>
+        <a class="btn btn-success" href="./NuevoVC.php"> Nuevo <i class="fa fa-plus"></i></a>
+    </div>
+    <br>
 
-<div id="datos"></div>
+    <div class="formulario">
+        <label for="caja_busqueda_Usuario">Buscar</label>
+        <input type="text" name="caja_busqueda_Usuario" id="caja_busqueda_Usuario"></input>
+    </div>
 
-
+    <div id="datosUsuario"></div>
 </section>
 
 <script type="text/javascript" src="./js/jquery.min.js"></script>

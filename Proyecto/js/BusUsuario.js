@@ -1,6 +1,6 @@
-$(buscar_datos());
+$(buscarDatosUsuario());
 
-function buscar_datos(consulta){
+function buscarDatosUsuario(consulta){
 	$.ajax({
 		url: './admin/buscarUsuario.php' ,
 		type: 'POST' ,
@@ -8,7 +8,7 @@ function buscar_datos(consulta){
 		data: {consulta: consulta},
 	})
 	.done(function(respuesta){
-		$("#datos").html(respuesta);
+		$("#datosUsuario").html(respuesta);
 	})
 	.fail(function(){
 		console.log("error");
@@ -16,11 +16,11 @@ function buscar_datos(consulta){
 }
 
 
-$(document).on('keyup','#caja_busqueda', function(){
+$(document).on('keyup','#caja_busqueda_Usuario', function(){
 	var valor = $(this).val();
 	if (valor != "") {
-		buscar_datos(valor);
+		buscarDatosUsuario(valor);
 	}else{
-		buscar_datos();
+		buscarDatosUsuario();
 	}
 });

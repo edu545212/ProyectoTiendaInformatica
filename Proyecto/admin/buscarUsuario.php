@@ -41,10 +41,7 @@
               <th>Editar</th>
               <th>Eliminar</th>
     				</tr>
-
     			</thead>
-    			
-
     	<tbody>";
 
     	while ($fila = $resultado->fetch_assoc()) {
@@ -72,12 +69,7 @@
     }else{
     	$salida.="Usuario no encontrado";
     }
-
-
     echo $salida;
-
     $conn->close();
-
-
 
 ?>
