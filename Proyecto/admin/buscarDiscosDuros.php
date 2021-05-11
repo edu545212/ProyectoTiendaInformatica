@@ -11,13 +11,13 @@
 
     $salida = "";
 
-    $query = "SELECT * FROM Procesador INNER JOIN Productos
-		ON Procesador.idProductos = Productos.idProductos";
+    $query = "SELECT * FROM DiscosDuros INNER JOIN Productos
+		ON DiscosDuros.idProductos = Productos.idProductos";
 
     if (isset($_POST['consulta'])) {
-    	$busquedaProcesador = $conn->real_escape_string($_POST['consulta']);
-    	$query = "SELECT * FROM Procesador INNER JOIN Productos
-      ON Procesador.idProductos = Productos.idProductos WHERE Nombre LIKE '%$busquedaProcesador%' OR Descripcion LIKE '%$busquedaProcesador%' OR Precio LIKE '%$busquedaProcesador%' OR Stock LIKE '%$busquedaProcesador%' OR Imagen LIKE '%$busquedaProcesador%' OR Marca LIKE '%$busquedaProcesador%' OR Soket LIKE '%$busquedaProcesador%'";
+    	$busquedaDiscosDuros = $conn->real_escape_string($_POST['consulta']);
+    	$query = "SELECT * FROM DiscosDuros INNER JOIN Productos
+      ON DiscosDuros.idProductos = Productos.idProductos WHERE Nombre LIKE '%$busquedaDiscosDuros%' OR Descripcion LIKE '%$busquedaDiscosDuros%' OR Precio LIKE '%$busquedaDiscosDuros%' OR Stock LIKE '%$busquedaDiscosDuros%' OR Imagen LIKE '%$busquedaDiscosDuros%' OR Marca LIKE '%$busquedaDiscosDuros%' OR Capacidad LIKE '%$busquedaDiscosDuros%' OR Tipo LIKE '%$busquedaDiscosDuros%'";
     }
 
     $resultado = $conn->query($query);
@@ -34,7 +34,8 @@
                             <th>Imagen</th>
                             <th>Marca</th>
                             <th>Categoria</th>
-                            <th>Soket</th>
+                            <th>Capacidad</th>
+                            <th>Tipo</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
                         </tr>
@@ -51,15 +52,16 @@
                         <td>".$fila["Imagen"]."</td>
                         <td>".$fila["Marca"]."</td>
                         <td>".$fila["Categoria"]."</td>
-                        <td>".$fila["Soket"]."</td>
-                        <td><a href='./EditarU.php?idProcesador=".$fila["idProcesador"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
-                        <td><a href='./admin/EliminarU.php?idProcesador=".$fila["idProcesador"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
+                        <td>".$fila["Capacidad"]."</td>
+                        <td>".$fila["Tipo"]."</td>
+                        <td><a href='./EditarU.php?idDiscosDuros=".$fila["idDiscosDuros"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
+                        <td><a href='./admin/EliminarU.php?idDiscosDuros=".$fila["idDiscosDuros"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
     				</tr>";
 
     	}
     	$salida.="</tbody></table>";
     }else{
-    	$salida.="Procesador no encontrado";
+    	$salida.="DiscosDuros no encontrado";
     }
     echo $salida;
 

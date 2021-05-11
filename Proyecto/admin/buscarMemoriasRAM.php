@@ -11,13 +11,13 @@
 
     $salida = "";
 
-    $query = "SELECT * FROM Procesador INNER JOIN Productos
-		ON Procesador.idProductos = Productos.idProductos";
+    $query = "SELECT * FROM MemoriasRAM INNER JOIN Productos
+		ON MemoriasRAM.idProductos = Productos.idProductos";
 
     if (isset($_POST['consulta'])) {
-    	$busquedaProcesador = $conn->real_escape_string($_POST['consulta']);
-    	$query = "SELECT * FROM Procesador INNER JOIN Productos
-      ON Procesador.idProductos = Productos.idProductos WHERE Nombre LIKE '%$busquedaProcesador%' OR Descripcion LIKE '%$busquedaProcesador%' OR Precio LIKE '%$busquedaProcesador%' OR Stock LIKE '%$busquedaProcesador%' OR Imagen LIKE '%$busquedaProcesador%' OR Marca LIKE '%$busquedaProcesador%' OR Soket LIKE '%$busquedaProcesador%'";
+    	$busquedaMemoriasRAM = $conn->real_escape_string($_POST['consulta']);
+    	$query = "SELECT * FROM MemoriasRAM INNER JOIN Productos
+      ON MemoriasRAM.idProductos = Productos.idProductos WHERE Nombre LIKE '%$busquedaMemoriasRAM%' OR Descripcion LIKE '%$busquedaMemoriasRAM%' OR Precio LIKE '%$busquedaMemoriasRAM%' OR Stock LIKE '%$busquedaMemoriasRAM%' OR Imagen LIKE '%$busquedaMemoriasRAM%' OR Marca LIKE '%$busquedaMemoriasRAM%' OR Almacenamiento LIKE '%$busquedaMemoriasRAM%' OR Formato LIKE '%$busquedaMemoriasRAM%' OR Tipo LIKE '%$busquedaMemoriasRAM%'";
     }
 
     $resultado = $conn->query($query);
@@ -34,7 +34,9 @@
                             <th>Imagen</th>
                             <th>Marca</th>
                             <th>Categoria</th>
-                            <th>Soket</th>
+                            <th>Almacenamiento</th>
+                            <th>Formato</th>
+                            <th>Tipo</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
                         </tr>
@@ -51,15 +53,17 @@
                         <td>".$fila["Imagen"]."</td>
                         <td>".$fila["Marca"]."</td>
                         <td>".$fila["Categoria"]."</td>
-                        <td>".$fila["Soket"]."</td>
-                        <td><a href='./EditarU.php?idProcesador=".$fila["idProcesador"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
-                        <td><a href='./admin/EliminarU.php?idProcesador=".$fila["idProcesador"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
+                        <td>".$fila["Almacenamiento"]."</td>
+                        <td>".$fila["Formato"]."</td>
+                        <td>".$fila["Tipo"]."</td>
+                        <td><a href='./EditarU.php?idMemoriasRAM=".$fila["idMemoriasRAM"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
+                        <td><a href='./admin/EliminarU.php?idMemoriasRAM=".$fila["idMemoriasRAM"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
     				</tr>";
 
     	}
     	$salida.="</tbody></table>";
     }else{
-    	$salida.="Procesador no encontrado";
+    	$salida.="MemoriasRAM no encontrado";
     }
     echo $salida;
 

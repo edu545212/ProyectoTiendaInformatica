@@ -11,13 +11,13 @@
 
     $salida = "";
 
-    $query = "SELECT * FROM Procesador INNER JOIN Productos
-		ON Procesador.idProductos = Productos.idProductos";
+    $query = "SELECT * FROM TarjetasGraficas INNER JOIN Productos
+		ON TarjetasGraficas.idProductos = Productos.idProductos";
 
     if (isset($_POST['consulta'])) {
-    	$busquedaProcesador = $conn->real_escape_string($_POST['consulta']);
-    	$query = "SELECT * FROM Procesador INNER JOIN Productos
-      ON Procesador.idProductos = Productos.idProductos WHERE Nombre LIKE '%$busquedaProcesador%' OR Descripcion LIKE '%$busquedaProcesador%' OR Precio LIKE '%$busquedaProcesador%' OR Stock LIKE '%$busquedaProcesador%' OR Imagen LIKE '%$busquedaProcesador%' OR Marca LIKE '%$busquedaProcesador%' OR Soket LIKE '%$busquedaProcesador%'";
+    	$busquedaTarjetasGraficas = $conn->real_escape_string($_POST['consulta']);
+    	$query = "SELECT * FROM TarjetasGraficas INNER JOIN Productos
+      ON TarjetasGraficas.idProductos = Productos.idProductos WHERE Nombre LIKE '%$busquedaTarjetasGraficas%' OR Descripcion LIKE '%$busquedaTarjetasGraficas%' OR Precio LIKE '%$busquedaTarjetasGraficas%' OR Stock LIKE '%$busquedaTarjetasGraficas%' OR Imagen LIKE '%$busquedaTarjetasGraficas%' OR Marca LIKE '%$busquedaTarjetasGraficas%' OR Tipo LIKE '%$busquedaTarjetasGraficas%' OR Memoria LIKE '%$busquedaTarjetasGraficas%'";
     }
 
     $resultado = $conn->query($query);
@@ -52,14 +52,14 @@
                         <td>".$fila["Marca"]."</td>
                         <td>".$fila["Categoria"]."</td>
                         <td>".$fila["Soket"]."</td>
-                        <td><a href='./EditarU.php?idProcesador=".$fila["idProcesador"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
-                        <td><a href='./admin/EliminarU.php?idProcesador=".$fila["idProcesador"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
+                        <td><a href='./EditarU.php?idTarjetasGraficas=".$fila["idTarjetasGraficas"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
+                        <td><a href='./admin/EliminarU.php?idTarjetasGraficas=".$fila["idTarjetasGraficas"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
     				</tr>";
 
     	}
     	$salida.="</tbody></table>";
     }else{
-    	$salida.="Procesador no encontrado";
+    	$salida.="TarjetasGraficas no encontrado";
     }
     echo $salida;
 
