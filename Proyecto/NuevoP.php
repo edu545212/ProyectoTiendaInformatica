@@ -20,7 +20,7 @@
 <body>
     <?php include './inc/nav.php'; ?>
         <main>
-            <form name="formulario" method="post" action="./admin/Nuevo_videojuego.php" id="loginform" enctype="multipart/form-data">
+            <form name="formulario" method="post" action="./productos/nuevo/NuevoProcesador.php" id="loginform" enctype="multipart/form-data">
                 <div class="container row justify-content-center">
 
                     <h1 class="col-8 text-center">Nuevo Procesador</h1>
@@ -38,6 +38,11 @@
                     <div class="form-group col-8 col-md-5">
                         <label for="Soket" class="visually-hidden">Soket</label>
                         <input id="Soket" type="text" class="form-control" name="Soket" placeholder="Soket" required>
+                    </div>
+
+                    <div class="form-group col-8 col-md-5">
+                        <label for="benchmark" class="visually-hidden">Benchmark</label>
+                        <input id="benchmark" type="text" class="form-control" name="benchmark" placeholder="benchmark" required>
                     </div>
 
                     <div class="form-group col-8 col-md-5">    
