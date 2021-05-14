@@ -1,10 +1,10 @@
 <?php
     //crea un nuevo DiscosDuros 
-	function nuevoDiscosDuros($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg){
+	function nuevoDiscosDuros($conexion, $Nombre, $Marca, $Tipo, $Capacidad, $Stock, $Precio, $Descripcion, $nombreImg){
 		$consulta = "INSERT INTO Productos VALUES (default, '$Nombre', '$Descripcion', '$Precio', '$Stock', '$nombreImg', '$Marca', 'DiscosDuros')";
 		mysqli_query($conexion, $consulta);
 		$idProducto = mysqli_insert_id($conexion);
-        $consultaP = "INSERT INTO DiscosDuros VALUES (default, '$idProducto', '$Soket', $benchmark)";
+        $consultaP = "INSERT INTO DiscosDuros VALUES (default, '$idProducto', '$Capacidad', $Tipo)";
         mysqli_query($conexion, $consultaP);
 	}
 
