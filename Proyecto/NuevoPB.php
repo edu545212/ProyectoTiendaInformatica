@@ -20,7 +20,7 @@
 <body>
     <?php include './inc/nav.php'; ?>
         <main>
-            <form name="formulario" method="post" action="./admin/Nuevo_videojuego.php" id="loginform" enctype="multipart/form-data">
+            <form name="formulario" method="post" action="./productos/nuevoPlacasBases.php" id="loginform" enctype="multipart/form-data">
                 <div class="container row justify-content-center">
 
                     <h1 class="col-8 text-center">Nuevo PlacasBases</h1>
