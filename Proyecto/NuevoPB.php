@@ -36,8 +36,13 @@
                     </div>
                     
                     <div class="form-group col-8 col-md-5">
-                        <label for="Soket" class="visually-hidden">Soket</label>
-                        <input id="Soket" type="text" class="form-control" name="Soket" placeholder="Soket" required>
+                        <label for="Chipset" class="visually-hidden">Chipset</label>
+                        <input id="Chipset" type="text" class="form-control" name="Chipset" placeholder="Chipset" required>
+                    </div>
+
+                    <div class="form-group col-8 col-md-5">
+                        <label for="Forma" class="visually-hidden">Forma</label>
+                        <input id="Forma" type="text" class="form-control" name="Forma" placeholder="Forma" required>
                     </div>
 
                     <div class="form-group col-8 col-md-5">    
@@ -55,7 +60,7 @@
                         <input id="Precio" type="number" class="form-control" name="Precio" placeholder="Precio"  required>
                     </div>
 
-                    <div class="form-group col-8 col-md-8">
+                    <div class="form-group col-8 col-md-5">
                         <label for="Descripcion" class="visually-hidden">Descripcion</label>
                         <input id="Descripcion" type="text" class="form-control" name="Descripcion" placeholder="Descripcion" required>
                     </div> 

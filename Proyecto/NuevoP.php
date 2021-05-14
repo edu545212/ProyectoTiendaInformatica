@@ -40,6 +40,11 @@
                         <input id="Soket" type="text" class="form-control" name="Soket" placeholder="Soket" required>
                     </div>
 
+                    <div class="form-group col-8 col-md-5">
+                        <label for="Benchmark" class="visually-hidden">Benchmark</label>
+                        <input id="Benchmark" type="text" class="form-control" name="Benchmark" placeholder="Benchmark" required>
+                    </div>
+
                     <div class="form-group col-8 col-md-5">    
                         <label for="imagen" class="visually-hidden">Imagen</label>
                         <input id="imagen" type="file" class="form-control-file" name="imagen" required >
@@ -55,7 +60,7 @@
                         <input id="Precio" type="number" class="form-control" name="Precio" placeholder="Precio"  required>
                     </div>
 
-                    <div class="form-group col-8 col-md-8">
+                    <div class="form-group col-8 col-md-5">
                         <label for="Descripcion" class="visually-hidden">Descripcion</label>
                         <input id="Descripcion" type="text" class="form-control" name="Descripcion" placeholder="Descripcion" required>
                     </div> 

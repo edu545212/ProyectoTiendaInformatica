@@ -36,8 +36,18 @@
                     </div>
                     
                     <div class="form-group col-8 col-md-5">
-                        <label for="Soket" class="visually-hidden">Soket</label>
-                        <input id="Soket" type="text" class="form-control" name="Soket" placeholder="Soket" required>
+                        <label for="Tipo" class="visually-hidden">Tipo</label>
+                        <input id="Tipo" type="text" class="form-control" name="Tipo" placeholder="Tipo" required>
+                    </div>
+
+                    <div class="form-group col-8 col-md-5">
+                        <label for="Memoria" class="visually-hidden">Memoria</label>
+                        <input id="Memoria" type="text" class="form-control" name="Memoria" placeholder="Memoria" required>
+                    </div>
+
+                    <div class="form-group col-8 col-md-5">
+                        <label for="Benchmark" class="visually-hidden">Benchmark</label>
+                        <input id="Benchmark" type="text" class="form-control" name="Benchmark" placeholder="Benchmark" required>
                     </div>
 
                     <div class="form-group col-8 col-md-5">    
