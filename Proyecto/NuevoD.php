@@ -20,7 +20,7 @@
 <body>
     <?php include './inc/nav.php'; ?>
         <main>
-            <form name="formulario" method="post" action="./admin/Nuevo_videojuego.php" id="loginform" enctype="multipart/form-data">
+            <form name="formulario" method="post" action="./productos/nuevoDiscosDuros.php" id="loginform" enctype="multipart/form-data">
                 <div class="container row justify-content-center">
 
                     <h1 class="col-8 text-center">Nuevo Disco Duros</h1>
@@ -36,8 +36,13 @@
                     </div>
                     
                     <div class="form-group col-8 col-md-5">
-                        <label for="Soket" class="visually-hidden">Soket</label>
-                        <input id="Soket" type="text" class="form-control" name="Soket" placeholder="Soket" required>
+                        <label for="Tipo" class="visually-hidden">Tipo</label>
+                        <input id="Tipo" type="text" class="form-control" name="Tipo" placeholder="Tipo" required>
+                    </div>
+
+                    <div class="form-group col-8 col-md-5">
+                        <label for="Capacidad" class="visually-hidden">Capacidad</label>
+                        <input id="Capacidad" type="text" class="form-control" name="Capacidad" placeholder="Capacidad" required>
                     </div>
 
                     <div class="form-group col-8 col-md-5">    
@@ -55,7 +60,7 @@
                         <input id="Precio" type="number" class="form-control" name="Precio" placeholder="Precio"  required>
                     </div>
 
-                    <div class="form-group col-8 col-md-8">
+                    <div class="form-group col-8 col-md-5">
                         <label for="Descripcion" class="visually-hidden">Descripcion</label>
                         <input id="Descripcion" type="text" class="form-control" name="Descripcion" placeholder="Descripcion" required>
                     </div> 

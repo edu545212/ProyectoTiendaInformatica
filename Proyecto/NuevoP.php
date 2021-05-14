@@ -60,7 +60,7 @@
                         <input id="Precio" type="number" class="form-control" name="Precio" placeholder="Precio"  required>
                     </div>
 
-                    <div class="form-group col-8 col-md-8">
+                    <div class="form-group col-8 col-md-5">
                         <label for="Descripcion" class="visually-hidden">Descripcion</label>
                         <input id="Descripcion" type="text" class="form-control" name="Descripcion" placeholder="Descripcion" required>
                     </div> 
