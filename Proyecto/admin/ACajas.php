@@ -10,7 +10,7 @@
     <h1>Cajas</h1>
 
     <div>
-        <a class="btn btn-success" href="./NuevoVC.php"> Nuevo <i class="fa fa-plus"></i></a>
+        <a class="btn btn-success" href="./NuevoC.php"> Nuevo <i class="fa fa-plus"></i></a>
     </div>
     <br>
 

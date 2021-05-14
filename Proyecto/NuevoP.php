@@ -26,29 +26,24 @@
                     <h1 class="col-8 text-center">Nuevo Procesador</h1>
 
                     <div class="form-group col-8 col-md-5">
-                        <label for="Titulo" class="visually-hidden">Titulo</label>
-                        <input id="Titulo" type="text" class="form-control" name="Titulo" placeholder="Titulo"  required>
+                        <label for="Nombre" class="visually-hidden">Nombre</label>
+                        <input id="Nombre" type="text" class="form-control" name="Nombre" placeholder="Nombre"  required>
                     </div>
 
                     <div class="form-group col-8 col-md-5">
-                        <label for="Compañia" class="visually-hidden">Compañia</label>
-                        <input id="Compañia" type="text" class="form-control" name="Compañia" placeholder="Compañia"  required>
+                        <label for="Marca" class="visually-hidden">Marca</label>
+                        <input id="Marca" type="text" class="form-control" name="Marca" placeholder="Marca"  required>
                     </div>
                     
                     <div class="form-group col-8 col-md-5">
-                        <label for="Publicacion" class="visually-hidden">Publicacion</label>
-                        <input id="Publicacion" type="date" class="form-control" name="Publicacion" placeholder="Publicacion" required>
+                        <label for="Soket" class="visually-hidden">Soket</label>
+                        <input id="Soket" type="text" class="form-control" name="Soket" placeholder="Soket" required>
                     </div>
 
                     <div class="form-group col-8 col-md-5">    
                         <label for="imagen" class="visually-hidden">Imagen</label>
                         <input id="imagen" type="file" class="form-control-file" name="imagen" required >
                     </div>
-
-                    <div class="form-group col-8 col-md-5">
-                        <label for="Descripcion" class="visually-hidden">Descripcion</label>
-                        <input id="Descripcion" type="text" class="form-control" name="Descripcion" placeholder="Descripcion" required>
-                    </div> 
 
                     <div class="form-group col-8 col-md-5">
                         <label for="Stock" class="visually-hidden">Stock</label>
@@ -60,7 +55,12 @@
                         <input id="Precio" type="number" class="form-control" name="Precio" placeholder="Precio"  required>
                     </div>
 
-                    <button class="col-5 col-md-4 btn btn-primary" type="submit">Registrar nuevo videojuego</button>
+                    <div class="form-group col-8 col-md-8">
+                        <label for="Descripcion" class="visually-hidden">Descripcion</label>
+                        <input id="Descripcion" type="text" class="form-control" name="Descripcion" placeholder="Descripcion" required>
+                    </div> 
+
+                    <button class="col-8 col-md-5 btn btn-primary" type="submit">Registrar nuevo procesador</button>
                     <p class="mt-5 mb-3 text-muted"></p>
 
                 </div>
