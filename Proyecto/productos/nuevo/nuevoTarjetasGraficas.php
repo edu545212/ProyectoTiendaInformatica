@@ -5,7 +5,8 @@
     //Recogemos los valores del formulario.
     $Nombre = $_POST["Nombre"];
     $Marca = $_POST["Marca"];
-    $Soket = $_POST["Soket"];
+    $Tipo = $_POST["Tipo"];
+    $Memoria = $_POST["Memoria"];
     $benchmark = $_POST["benchmark"];
     $Stock = $_POST["Stock"];
     $Precio = $_POST["Precio"];
@@ -30,7 +31,7 @@
         window.location.href="../../admin.php";
         </script>';
     } else {
-        $insertar = nuevoTarjetasGraficas($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg);
+        $insertar = nuevoTarjetasGraficas($conexion, $Nombre, $Marca, $Tipo, $Memoria, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg);
         mysqli_num_rows($insertar);
         header ('Location: ../../admin.php');
     }

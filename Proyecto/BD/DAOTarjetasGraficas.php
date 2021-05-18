@@ -1,10 +1,10 @@
 <?php
     //crea un nuevo TarjetasGraficas 
-	function nuevoTarjetasGraficas($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg){
+	function nuevoTarjetasGraficas($conexion, $Nombre, $Marca, $Tipo, $Memoria ,$benchmark, $Stock, $Precio, $Descripcion, $nombreImg){
 		$consulta = "INSERT INTO Productos VALUES (default, '$Nombre', '$Descripcion', '$Precio', '$Stock', '$nombreImg', '$Marca', 'TarjetasGraficas')";
 		mysqli_query($conexion, $consulta);
 		$idProducto = mysqli_insert_id($conexion);
-        $consultaP = "INSERT INTO TarjetasGraficas VALUES (default, '$idProducto', '$Soket', $benchmark)";
+        $consultaP = "INSERT INTO TarjetasGraficas VALUES (default, '$idProducto', '$Tipo', '$Memoria', '$benchmark')";
         mysqli_query($conexion, $consultaP);
 	}
 

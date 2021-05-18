@@ -34,7 +34,9 @@
                             <th>Imagen</th>
                             <th>Marca</th>
                             <th>Categoria</th>
-                            <th>Soket</th>
+                            <th>Tipo</th>
+                            <th>Memoria</th>
+                            <th>Benchmark</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
                         </tr>
@@ -51,7 +53,9 @@
                         <td>".$fila["Imagen"]."</td>
                         <td>".$fila["Marca"]."</td>
                         <td>".$fila["Categoria"]."</td>
-                        <td>".$fila["Soket"]."</td>
+                        <td>".$fila["Tipo"]."</td>
+                        <td>".$fila["Memoria"]."</td>
+                        <td>".$fila["Benchmark"]."</td>
                         <td><a href='./EditarU.php?idTarjetasGraficas=".$fila["idTarjetasGraficas"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
                         <td><a href='./admin/EliminarU.php?idTarjetasGraficas=".$fila["idTarjetasGraficas"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
     				</tr>";

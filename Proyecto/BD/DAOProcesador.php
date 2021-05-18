@@ -4,7 +4,7 @@
 		$consulta = "INSERT INTO Productos VALUES (default, '$Nombre', '$Descripcion', '$Precio', '$Stock', '$nombreImg', '$Marca', 'Procesador')";
 		mysqli_query($conexion, $consulta);
 		$idProducto = mysqli_insert_id($conexion);
-        $consultaP = "INSERT INTO Procesador VALUES (default, '$idProducto', '$Soket', $benchmark)";
+        $consultaP = "INSERT INTO Procesador VALUES (default, '$idProducto', '$Soket', '$benchmark')";
         mysqli_query($conexion, $consultaP);
 	}
 

@@ -4,7 +4,7 @@
 		$consulta = "INSERT INTO Productos VALUES (default, '$Nombre', '$Descripcion', '$Precio', '$Stock', '$nombreImg', '$Marca', 'DiscosDuros')";
 		mysqli_query($conexion, $consulta);
 		$idProducto = mysqli_insert_id($conexion);
-        $consultaP = "INSERT INTO DiscosDuros VALUES (default, '$idProducto', '$Capacidad', $Tipo)";
+        $consultaP = "INSERT INTO DiscosDuros VALUES (default, '$idProducto', '$Capacidad', '$Tipo')";
         mysqli_query($conexion, $consultaP);
 	}
 

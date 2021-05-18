@@ -1,10 +1,10 @@
 <?php
     //crea un nuevo MemoriaRAM 
-	function nuevoMemoriaRAM($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg){
+	function nuevoMemoriasRAM($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo ,$Stock, $Precio, $Descripcion, $nombreImg){
 		$consulta = "INSERT INTO Productos VALUES (default, '$Nombre', '$Descripcion', '$Precio', '$Stock', '$nombreImg', '$Marca', 'MemoriaRAM')";
 		mysqli_query($conexion, $consulta);
 		$idProducto = mysqli_insert_id($conexion);
-        $consultaP = "INSERT INTO MemoriaRAM VALUES (default, '$idProducto', '$Soket', $benchmark)";
+        $consultaP = "INSERT INTO MemoriasRAM VALUES (default, '$idProducto', '$Almacenamiento', '$Formato', '$Tipo')";
         mysqli_query($conexion, $consultaP);
 	}
 
