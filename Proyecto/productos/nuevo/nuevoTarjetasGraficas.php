@@ -7,7 +7,7 @@
     $Marca = $_POST["Marca"];
     $Tipo = $_POST["Tipo"];
     $Memoria = $_POST["Memoria"];
-    $benchmark = $_POST["benchmark"];
+    $benchmark = $_POST["Benchmark"];
     $Stock = $_POST["Stock"];
     $Precio = $_POST["Precio"];
     $Descripcion = $_POST["Descripcion"];

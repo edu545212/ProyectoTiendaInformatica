@@ -14,4 +14,85 @@
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
+
+	class Procesador {
+		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
+		private $user  = 'EduardoRTX';
+		private $password   = "SoyEduardo1";
+		private $database  = "TiendaInformatica";
+		private $dbConnect = false;
+		public function __construct(){
+			if(!$this->dbConnect){ 
+				$conn = new mysqli($this->host, $this->user, $this->password, $this->database);
+				if($conn->connect_error){
+					die("Error al conectar con MySQL: " . $conn->connect_error);
+				}else{
+					$this->dbConnect = $conn;
+				}
+			}
+		}
+		private function getData($sqlQuery) {
+			$result = mysqli_query($this->dbConnect, $sqlQuery);
+			if(!$result){
+				die('Error en la consulta: '. mysqli_error($conn));
+			}
+			$data= array();
+			
+			/*while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {*/
+				while ($row = mysqli_fetch_assoc($result)) {
+				$data[]=$row;            
+			}
+			return $data;
+		}	
+		public function getMarca(){
+			$sqlQuery = "
+				SELECT DISTINCT(Marca)
+				FROM Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos ORDER BY idProcesador DESC";
+			return  $this->getData($sqlQuery);
+		}
+		public function getSoket(){
+			$sqlQuery = "
+				SELECT DISTINCT(Soket)
+				FROM Procesador 
+				ORDER BY Soket DESC";
+			return  $this->getData($sqlQuery);
+		}
+
+		public function searchProducts(){
+			$sqlQuery = "SELECT * FROM Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos";
+			if(isset($_POST["Marca"])) {
+				$MarcaFilterData = implode("','", $_POST["Marca"]);
+				$sqlQuery .= "
+				AND Marca IN('".$MarcaFilterData."')";
+			}
+			if(isset($_POST["Soket"])){
+				$SoketFilterData = implode("','", $_POST["Soket"]);
+				$sqlQuery .= "
+				AND Soket IN('".$SoketFilterData."')";
+			}
+			$sqlQuery .= " ORDER By Precio";
+			$result = mysqli_query($this->dbConnect, $sqlQuery);
+			$totalResult = mysqli_num_rows($result);
+			$searchResultHTML = '';
+			if($totalResult > 0) {
+				/*while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {*/
+				while ($row = mysqli_fetch_assoc($result)) {
+					$searchResultHTML .= '
+					<div class="card col-md-4 col-lg-3 col-xl-2 mx-1 my-1">
+                    	<img class="card-img-top mx-1 my-4" src="./img/Procesador/'. $row['Imagen'].'" style="width: 90%; height: 150px">
+						<div class="card-body">
+							<h4 class="card-title text-center">'.$row['Nombre'].'</h4>
+							<p class="card-text text-center">Precio: '.$row['Precio'].'€</p>
+							<p class="text-center">
+								<a href="infoConsolas.php?idPlataforma='.$row['idPlataforma'].'" class="btn btn-primary btn-sm btn-raised btn-block"><i class="fa fa-plus"></i>&nbsp; Detalles</a>
+							</p>
+						</div>
+                	</div>';
+				}
+			} else {
+				$searchResultHTML = '<h3>No se ha encontrado ningún producto..</h3>';
+			}
+			return $searchResultHTML;	
+		}	
+	}
 ?>
