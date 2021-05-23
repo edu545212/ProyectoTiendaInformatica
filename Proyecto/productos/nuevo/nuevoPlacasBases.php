@@ -31,7 +31,7 @@
         </script>';
     } else {
         $insertar = nuevoPlacasBases($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion, $nombreImg);
-        mysqli_num_rows($insertar);
+        mysqli_query($conexion, $insertar);
         header ('Location: ../../admin.php');
     }
 ?>

@@ -31,7 +31,7 @@
         </script>';
     } else {
         $insertar = nuevoProcesador($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg);
-        mysqli_num_rows($insertar);
+        mysqli_query($conexion, $insertar);
         header ('Location: ../../admin.php');
     }
 ?>

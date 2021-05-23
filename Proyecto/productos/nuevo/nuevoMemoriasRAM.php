@@ -32,7 +32,7 @@
         </script>';
     } else {
         $insertar = nuevoMemoriasRAM($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg);
-        mysqli_num_rows($insertar);
+        mysqli_query($conexion, $insertar);
         header ('Location: ../../admin.php');
     }
 ?>

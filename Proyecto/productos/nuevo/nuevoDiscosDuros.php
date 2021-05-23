@@ -31,7 +31,7 @@
         </script>';
     } else {
         $insertar = nuevoDiscosDuros($conexion, $Nombre, $Marca, $Tipo, $Capacidad, $Stock, $Precio, $Descripcion, $nombreImg);
-        mysqli_num_rows($insertar);
+        mysqli_query($conexion, $insertar);
         header ('Location: ../../admin.php');
     }
 ?>

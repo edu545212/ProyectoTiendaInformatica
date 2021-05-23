@@ -32,7 +32,7 @@
         </script>';
     } else {
         $insertar = nuevoTarjetasGraficas($conexion, $Nombre, $Marca, $Tipo, $Memoria, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg);
-        mysqli_num_rows($insertar);
+        mysqli_query($conexion, $insertar);
         header ('Location: ../../admin.php');
     }
 ?>
