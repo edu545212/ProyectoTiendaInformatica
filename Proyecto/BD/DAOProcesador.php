@@ -15,6 +15,25 @@
 		return $resultado;
 	}
 
+	function editarProcesadorFormulario ($conexion, $idProcesador){
+		$consulta = "SELECT * FROM Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos WHERE idProcesador = '$idProcesador'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarProcesadorNoImg($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion){
+		$consulta = "UPDATE Usuario SET Password='$password', Nombre='$nombre', Apellido1='$apellido1', Apellido2='$apellido2', Telefono='$telefono', 
+		Email='$email', CP='$CP', Provincia='$provincia', ComunidadAutonoma='$CA', Rol='$ROL', DNi='$DNI' , Direccion='$Direccion' WHERE Usuario = '$usuario'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarProcesador($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg){
+		$consulta = "SELECT * FROM Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos WHERE idProcesador = '$idProcesador'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class Procesador {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';
