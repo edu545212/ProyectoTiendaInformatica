@@ -55,7 +55,7 @@
                         }
                         echo '<br>
                         <div class="text-center">
-                        <a href="'.$fila['Stock'].'.php" class="btn col-5 btn-primary"><i class="fa fa-mail-reply"></i>&nbsp;&nbsp;Regresar a la tienda</a>
+                        <a href="'.$fila['Categoria'].'.php" class="btn col-5 btn-primary"><i class="fa fa-mail-reply"></i>&nbsp;&nbsp;Regresar a la tienda</a>
                         </div>
                     </div>'; 
                     ?>   
