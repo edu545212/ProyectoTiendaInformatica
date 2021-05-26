@@ -52,8 +52,8 @@
             </script>';
         } else { 
         $insertar = insertarUsuarioAdmin($conexion, $usuario, $password, $nombre, $apellido1, $apellido2, $telefono, $email, $CP, $provincia, $CA, $DNI, $ROL, $Direccion);
-        mysqli_query($conexion, $insetar);
-        header ('Location: ../Admin.php');
+        mysqli_query($conexion, $insertar);
+        header ('Location: ../admin.php');
         }
     }
 

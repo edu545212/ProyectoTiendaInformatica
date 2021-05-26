@@ -8,11 +8,10 @@
 ?>
 <?php
     require "../../BD/conector_bd.php";
-    require "../../BD/DAOUsuario.php";
+    require "../../BD/DAODiscosDuros.php";
     $conexion = conectar(true);
-    $id = ($_GET['idUsuario']);
-    $sql = EliminarUsuario($conexion, $id);
+    $id = $_GET['idDiscosDuros'];
+    $sql = eliminarDiscosDuros($conexion, $id);
     mysqli_num_rows($sql);	
     header ('Location: ../../admin.php');
-    
 ?>

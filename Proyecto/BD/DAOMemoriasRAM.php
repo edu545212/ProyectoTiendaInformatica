@@ -37,6 +37,13 @@
 		return $resultado;
 	}
 
+	function eliminarMemoriasRAM($conexion, $idMemoriasRAM){
+		$consulta = "DELETE MemoriasRAM, Productos FROM MemoriasRAM INNER JOIN Productos ON MemoriasRAM.idProductos = Productos.idProductos
+		WHERE MemoriasRAM.idMemoriasRAM= '$idMemoriasRAM'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class MemoriasRAM {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

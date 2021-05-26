@@ -37,6 +37,13 @@
 		return $resultado;
 	}
 
+	function eliminarPlacasBases($conexion, $idPlacasBases){
+		$consulta = "DELETE PlacasBases, Productos FROM PlacasBases INNER JOIN Productos ON PlacasBases.idProductos = Productos.idProductos
+		WHERE PlacasBases.idPlacasBases= '$idPlacasBases'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class PlacasBases {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

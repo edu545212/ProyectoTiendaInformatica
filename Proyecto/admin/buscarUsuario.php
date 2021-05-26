@@ -61,7 +61,7 @@
         <td>".$fila["ComunidadAutonoma"]."</td>
         <td>".$fila["Direccion"]."</td>
         <td><a href='./EditarU.php?idUsuario=".$fila["idUsuario"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
-        <td><a href='./admin/Eliminar/EliminarU.php?idUsuario=".$fila["idUsuario"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
+        <td><a href='./usuarios/EliminarU.php?idUsuario=".$fila["idUsuario"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
     				</tr>";
 
     	}

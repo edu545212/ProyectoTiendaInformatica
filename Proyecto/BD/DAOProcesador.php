@@ -37,6 +37,13 @@
 		return $resultado;
 	}
 
+	function eliminarProcesador($conexion, $idProcesador){
+		$consulta = "DELETE Procesador, Productos FROM Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos
+			WHERE Procesador.idProcesador= '$idProcesador'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class Procesador {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

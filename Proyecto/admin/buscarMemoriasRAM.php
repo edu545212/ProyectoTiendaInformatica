@@ -57,7 +57,7 @@
                         <td>".$fila["Formato"]."</td>
                         <td>".$fila["Tipo"]."</td>
                         <td><a href='./EditarM.php?idMemoriasRAM=".$fila["idMemoriasRAM"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
-                        <td><a href='./admin/EliminarU.php?idMemoriasRAM=".$fila["idMemoriasRAM"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
+                        <td><a href='./productos/eliminar/EliminarM.php?idMemoriasRAM=".$fila["idMemoriasRAM"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
     				</tr>";
 
     	}

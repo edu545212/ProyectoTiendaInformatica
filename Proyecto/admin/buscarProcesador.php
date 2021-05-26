@@ -55,7 +55,7 @@
                         <td>".$fila["Soket"]."</td>
                         <td>".$fila["Benchmark"]."</td>
                         <td><a href='./EditarP.php?idProcesador=".$fila["idProcesador"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
-                        <td><a href='./admin/EliminarP.php?idProcesador=".$fila["idProcesador"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
+                        <td><a href='./productos/eliminar/EliminarP.php?idProcesador=".$fila["idProcesador"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
     				</tr>";
 
     	}

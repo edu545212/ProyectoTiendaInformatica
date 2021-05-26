@@ -37,6 +37,13 @@
 		return $resultado;
 	}
 
+	function eliminarTarjetasGraficas($conexion, $idTarjetasGraficas){
+		$consulta = "DELETE TarjetasGraficas, Productos FROM TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos
+		WHERE TarjetasGraficas.idTarjetasGraficas= '$idTarjetasGraficas'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class TarjetasGraficas {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

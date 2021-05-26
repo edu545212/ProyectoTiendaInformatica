@@ -37,6 +37,13 @@
 		return $resultado;
 	}
 
+	function eliminarCajas($conexion, $idCajas){
+		$consulta = "DELETE Cajas, Productos FROM Cajas INNER JOIN Productos ON Cajas.idProductos = Productos.idProductos
+		WHERE Cajas.idCajas= '$idCajas'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class Cajas {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

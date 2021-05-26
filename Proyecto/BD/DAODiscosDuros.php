@@ -37,6 +37,13 @@
 		return $resultado;
 	}
 
+	function eliminarDiscosDuros($conexion, $idDiscosDuros){
+		$consulta = "DELETE DiscosDuros, Productos FROM DiscosDuros INNER JOIN Productos ON DiscosDuros.idProductos = Productos.idProductos
+		WHERE DiscosDuros.idDiscosDuros= '$idDiscosDuros'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class DiscosDuros {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';
