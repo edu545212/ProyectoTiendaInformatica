@@ -15,6 +15,28 @@
 		return $resultado;
 	}
 
+		function editarDiscosDurosFormulario ($conexion, $idDiscosDuros){
+		$consulta = "SELECT * FROM DiscosDuros INNER JOIN Productos ON DiscosDuros.idProductos = Productos.idProductos WHERE idDiscosDuros = '$idDiscosDuros'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarDiscosDurosNoImg($conexion, $Nombre, $Marca, $Capacidad, $Tipo, $Stock, $Precio, $Descripcion){
+		$consulta = "UPDATE DiscosDuros INNER JOIN Productos ON DiscosDuros.idProductos = Productos.idProductos
+			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
+			Capacidad='$Capacidad', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarDiscosDuros($conexion, $Nombre, $Marca, $Capacidad, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg){
+		$consulta = "UPDATE DiscosDuros INNER JOIN Productos ON DiscosDuros.idProductos = Productos.idProductos
+			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
+			Imagen='$nombreImg', Capacidad='$Capacidad', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class DiscosDuros {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';
