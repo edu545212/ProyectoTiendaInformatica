@@ -20,7 +20,7 @@
 <body>
     <?php include './inc/nav.php'; ?>
         <main>
-            <form name="formulario" method="post" action="./productos/nuevo/NuevoProcesador.php" id="loginform" enctype="multipart/form-data">
+            <form name="formulario" method="post" action="./productos/nuevo/nuevoProcesador.php" id="loginform" enctype="multipart/form-data">
                 <div class="container row justify-content-center">
 
                     <h1 class="col-8 text-center">Nuevo Procesador</h1>
