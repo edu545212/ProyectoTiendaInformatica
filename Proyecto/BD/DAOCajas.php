@@ -15,6 +15,28 @@
 		return $resultado;
 	}
 
+	function editarCajasFormulario ($conexion, $idCajas){
+		$consulta = "SELECT * FROM Cajas INNER JOIN Productos ON Cajas.idProductos = Productos.idProductos WHERE idCajas = '$idCajas'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarCajasNoImg($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion){
+		$consulta = "UPDATE Cajas INNER JOIN Productos ON Cajas.idProductos = Productos.idProductos
+			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
+			Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarCajas($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg){
+		$consulta = "UPDATE Cajas INNER JOIN Productos ON Cajas.idProductos = Productos.idProductos
+			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
+			Imagen='$nombreImg', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class Cajas {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

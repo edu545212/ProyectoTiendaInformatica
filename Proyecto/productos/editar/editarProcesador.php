@@ -1,11 +1,11 @@
 <?php
-    require "../BD/conector_bd.php";
-    require "../BD/DAOProcesador.php";
+    require "../../BD/conector_bd.php";
+    require "../../BD/DAOProcesador.php";
 
     //Recogemos los valores del formulario.
     $Nombre = $_POST["Nombre"];
     $Marca = $_POST["Marca"];
-    $Soket = $_POST["soket"];
+    $Soket = $_POST["Soket"];
     $benchmark = $_POST["benchmark"];
     $Stock = $_POST["Stock"];
     $Precio = $_POST["Precio"];
@@ -14,7 +14,7 @@
     //imagen
     $nombreImg = $_FILES['imagen']['name'];
     $archivoImg = $_FILES['imagen']['tmp_name'];
-    $rutaImg ="../img/Procesador";
+    $rutaImg ="../../img/Procesador";
     $rutaImg =$rutaImg."/".$nombreImg;
 
     move_uploaded_file($archivoImg,$rutaImg);
@@ -27,5 +27,5 @@
         $insertar = editarProcesador($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg);
         mysqli_query($insertar);
     }
-    header ('Location: ../admin.php');
+    header ('Location: ../../admin.php');
 ?>

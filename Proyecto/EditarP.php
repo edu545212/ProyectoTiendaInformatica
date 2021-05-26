@@ -54,7 +54,7 @@
 
                     <div class="form-group col-8 col-md-5">    
                         <label for="imagen" class="visually-hidden">Imagen</label>
-                        <input id="imagen" type="file" class="form-control-file" value="<?php echo $fila['Imagen']?>" name="imagen" required >
+                        <input id="imagen" type="file" class="form-control-file" value="<?php echo $fila['Imagen']?>" name="imagen">
                     </div>
 
                     <div class="form-group col-8 col-md-5">
