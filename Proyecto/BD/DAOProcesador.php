@@ -21,18 +21,18 @@
 		return $resultado;
 	}
 
-	function editarProcesadorNoImg($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion){
+	function editarProcesadorNoImg($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $idProcesador){
 		$consulta = "UPDATE Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
-			Soket='$Soket', Benchmark='$benchmark' WHERE Nombre = '$Nombre'";
+			Soket='$Soket', Benchmark='$benchmark' WHERE idProcesador = '$idProcesador'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
-	function editarProcesador($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg){
+	function editarProcesador($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg, $idProcesador){
 		$consulta = "UPDATE Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
-			Imagen='$nombreImg', Soket='$Soket', Benchmark='$benchmark' WHERE Nombre = '$Nombre'";
+			Imagen='$nombreImg', Soket='$Soket', Benchmark='$benchmark' WHERE idProcesador = '$idProcesador'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}

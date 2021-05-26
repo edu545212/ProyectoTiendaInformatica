@@ -32,6 +32,11 @@
                         while($fila=mysqli_fetch_array($consulta)){
                     ?>
 
+                    <div class="form-group col-8 col-md-5" style="display: none">
+                        <label for="idProcesador" class="visually-hidden">idProcesador</label>
+                        <input id="idProcesador" type="text" class="form-control" value="<?php echo $fila['idProcesador']?>" name="idProcesador" placeholder="idProcesador"  required>
+                    </div>
+
                     <div class="form-group col-8 col-md-5">
                         <label for="Nombre" class="visually-hidden">Nombre</label>
                         <input id="Nombre" type="text" class="form-control" value="<?php echo $fila['Nombre']?>" name="Nombre" placeholder="Nombre"  required>

@@ -3,6 +3,7 @@
     require "../../BD/DAOProcesador.php";
 
     //Recogemos los valores del formulario.
+    $idProcesador=$_POST['idProcesador'];
     $Nombre = $_POST["Nombre"];
     $Marca = $_POST["Marca"];
     $Soket = $_POST["Soket"];
@@ -21,10 +22,10 @@
 
     $conexion = conectar(true);
     if(empty($archivoImg)) {
-        $insertarnoimg = editarProcesadorNoImg($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion);
+        $insertarnoimg = editarProcesadorNoImg($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $idProcesador);
         mysqli_query($conexion, $insertarnoimg);
     } else {
-        $insertar = editarProcesador($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg);
+        $insertar = editarProcesador($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg, $idProcesador);
         mysqli_query($conexion, $insertar);
     }
     header ('Location: ../../admin.php');

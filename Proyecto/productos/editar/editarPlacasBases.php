@@ -3,6 +3,7 @@
     require "../../BD/DAOPlacasBases.php";
 
     //Recogemos los valores del formulario.
+    $idPlacasBases=$_POST['idPlacasBases'];
     $Nombre = $_POST["Nombre"];
     $Marca = $_POST["Marca"];
     $Chipset = $_POST["Chipset"];
@@ -21,10 +22,10 @@
 
     $conexion = conectar(true);
     if(empty($archivoImg)) {
-        $insertarnoimg = editarPlacasBasesNoImg($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion);
+        $insertarnoimg = editarPlacasBasesNoImg($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion, $idPlacasBases);
         mysqli_query($conexion, $insertarnoimg);
     } else {
-        $insertar = editarPlacasBases($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion, $nombreImg);
+        $insertar = editarPlacasBases($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion, $nombreImg, $idPlacasBases);
         mysqli_query($conexion, $insertar);
     }
     header ('Location: ../../admin.php');

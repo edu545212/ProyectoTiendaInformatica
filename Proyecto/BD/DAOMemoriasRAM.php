@@ -21,18 +21,18 @@
 		return $resultado;
 	}
 
-	function editarMemoriasRAMNoImg($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion){
+	function editarMemoriasRAMNoImg($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion, $idMemoriasRAM){
 		$consulta = "UPDATE MemoriasRAM INNER JOIN Productos ON MemoriasRAM.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
-			Almacenamiento='$Almacenamiento', Formato='$Formato', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+			Almacenamiento='$Almacenamiento', Formato='$Formato', Tipo='$Tipo' WHERE idMemoriasRAM = '$idMemoriasRAM'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
-	function editarMemoriasRAM($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg){
+	function editarMemoriasRAM($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg, $idMemoriasRAM){
 		$consulta = "UPDATE MemoriasRAM INNER JOIN Productos ON MemoriasRAM.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
-			Imagen='$nombreImg', Almacenamiento='$Almacenamiento', Formato='$Formato', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+			Imagen='$nombreImg', Almacenamiento='$Almacenamiento', Formato='$Formato', Tipo='$Tipo' WHERE idMemoriasRAM = '$idMemoriasRAM'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}

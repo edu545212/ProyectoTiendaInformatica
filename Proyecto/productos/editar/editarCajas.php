@@ -3,6 +3,7 @@
     require "../../BD/DAOCajas.php";
 
     //Recogemos los valores del formulario.
+    $idCajas=$_POST['idCajas'];
     $Nombre = $_POST["Nombre"];
     $Marca = $_POST["Marca"];
     $Tipo = $_POST["Tipo"];
@@ -20,10 +21,10 @@
 
     $conexion = conectar(true);
     if(empty($archivoImg)) {
-        $insertarnoimg = editarCajasNoImg($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion);
+        $insertarnoimg = editarCajasNoImg($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion, $idCajas);
         mysqli_query($conexion, $insertarnoimg);
     } else {
-        $insertar = editarCajas($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg);
+        $insertar = editarCajas($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg, $idCajas);
         mysqli_query($conexion, $insertar);
     }
     header ('Location: ../../admin.php');

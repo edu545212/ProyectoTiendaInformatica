@@ -3,6 +3,7 @@
     require "../../BD/DAOTarjetasGraficas.php";
 
     //Recogemos los valores del formulario.
+    $idTarjetasGraficas=$_POST['idTarjetasGraficas'];
     $Nombre = $_POST["Nombre"];
     $Marca = $_POST["Marca"];
     $Memoria = $_POST["Memoria"];
@@ -22,10 +23,10 @@
 
     $conexion = conectar(true);
     if(empty($archivoImg)) {
-        $insertarnoimg = editarTarjetasGraficasNoImg($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion);
+        $insertarnoimg = editarTarjetasGraficasNoImg($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion, $idTarjetasGraficas);
         mysqli_query($conexion, $insertarnoimg);
     } else {
-        $insertar = editarTarjetasGraficas($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg);
+        $insertar = editarTarjetasGraficas($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg, $idTarjetasGraficas);
         mysqli_query($conexion, $insertar);
     }
     header ('Location: ../../admin.php');

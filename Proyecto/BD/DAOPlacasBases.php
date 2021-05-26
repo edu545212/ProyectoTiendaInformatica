@@ -21,18 +21,18 @@
 		return $resultado;
 	}
 
-	function editarPlacasBasesNoImg($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion){
+	function editarPlacasBasesNoImg($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion, $idPlacasBases){
 		$consulta = "UPDATE PlacasBases INNER JOIN Productos ON PlacasBases.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
-			Chipset='$Chipset', Forma='$Forma' WHERE Nombre = '$Nombre'";
+			Chipset='$Chipset', Forma='$Forma' WHERE idPlacasBases = '$idPlacasBases'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
-	function editarPlacasBases($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion, $nombreImg){
+	function editarPlacasBases($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion, $nombreImg, $idPlacasBases){
 		$consulta = "UPDATE PlacasBases INNER JOIN Productos ON PlacasBases.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
-			Imagen='$nombreImg', Chipset='$Chipset', Forma='$Forma' WHERE Nombre = '$Nombre'";
+			Imagen='$nombreImg', Chipset='$Chipset', Forma='$Forma' WHERE idPlacasBases = '$idPlacasBases'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}

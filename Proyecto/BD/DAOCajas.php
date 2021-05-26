@@ -21,18 +21,18 @@
 		return $resultado;
 	}
 
-	function editarCajasNoImg($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion){
+	function editarCajasNoImg($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion, $idCajas){
 		$consulta = "UPDATE Cajas INNER JOIN Productos ON Cajas.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
-			Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+			Tipo='$Tipo' WHERE idCajas = '$idCajas'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
-	function editarCajas($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg){
+	function editarCajas($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg, $idCajas){
 		$consulta = "UPDATE Cajas INNER JOIN Productos ON Cajas.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
-			Imagen='$nombreImg', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+			Imagen='$nombreImg', Tipo='$Tipo' WHERE idCajas = '$idCajas'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}

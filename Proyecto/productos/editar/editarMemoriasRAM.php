@@ -3,6 +3,7 @@
     require "../../BD/DAOMemoriasRAM.php";
 
     //Recogemos los valores del formulario.
+    $idMemoriasRAM=$_POST['idMemoriasRAM'];
     $Nombre = $_POST["Nombre"];
     $Marca = $_POST["Marca"];
     $Almacenamiento = $_POST["Almacenamiento"];
@@ -22,10 +23,10 @@
 
     $conexion = conectar(true);
     if(empty($archivoImg)) {
-        $insertarnoimg = editarMemoriasRAMNoImg($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion);
+        $insertarnoimg = editarMemoriasRAMNoImg($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion, $idMemoriasRAM);
         mysqli_query($conexion, $insertarnoimg);
     } else {
-        $insertar = editarMemoriasRAM($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg);
+        $insertar = editarMemoriasRAM($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg, $idMemoriasRAM);
         mysqli_query($insertar);
     }
     header ('Location: ../../admin.php');

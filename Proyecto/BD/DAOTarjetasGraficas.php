@@ -21,18 +21,18 @@
 		return $resultado;
 	}
 
-	function editarTarjetasGraficasNoImg($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion){
+	function editarTarjetasGraficasNoImg($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion, $idTarjetasGraficas){
 		$consulta = "UPDATE TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
-			Memoria='$Memoria', Benchmark='$Benchmark', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+			Memoria='$Memoria', Benchmark='$Benchmark', Tipo='$Tipo' WHERE idTarjetasGraficas = '$idTarjetasGraficas'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
-	function editarTarjetasGraficas($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg){
+	function editarTarjetasGraficas($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg, $idTarjetasGraficas){
 		$consulta = "UPDATE TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
-			Imagen='$nombreImg', Memoria='$Memoria', Benchmark='$Benchmark', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+			Imagen='$nombreImg', Memoria='$Memoria', Benchmark='$Benchmark', Tipo='$Tipo' WHERE idTarjetasGraficas = '$idTarjetasGraficas'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
