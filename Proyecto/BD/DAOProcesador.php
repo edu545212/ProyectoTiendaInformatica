@@ -1,7 +1,7 @@
 <?php
     //crea un nuevo Procesador 
 	function nuevoProcesador($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg){
-		$consulta = "INSERT INTO Productos VALUES (default, '$Nombre', '$Descripcion', '$Precio', '$Stock', '$nombreImg', '$Marca', 'Procesador')";
+		$consulta = "INSERT INTO Productos VALUES (default, '$Nombre', '$Descripcion', '$Precio', '$Stock', '$nombreImg', '$Marca', 'Procesadores')";
 		mysqli_query($conexion, $consulta);
 		$idProducto = mysqli_insert_id($conexion);
         $consultaP = "INSERT INTO Procesador VALUES (default, '$idProducto', '$Soket', '$benchmark')";
