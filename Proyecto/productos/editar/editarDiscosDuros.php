@@ -22,10 +22,10 @@
     $conexion = conectar(true);
     if(empty($archivoImg)) {
         $insertarnoimg = editarDiscosDurosNoImg($conexion, $Nombre, $Marca, $Capacidad, $Tipo, $Stock, $Precio, $Descripcion);
-        mysqli_query($insertarnoimg);
+        mysqli_query($conexion, $insertarnoimg);
     } else {
         $insertar = editarDiscosDuros($conexion, $Nombre, $Marca, $Capacidad, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg);
-        mysqli_query($insertar);
+        mysqli_query($conexion, $insertar);
     }
     header ('Location: ../../admin.php');
 ?>

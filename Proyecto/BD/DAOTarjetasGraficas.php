@@ -15,6 +15,28 @@
 		return $resultado;
 	}
 
+	function editarTarjetasGraficasFormulario ($conexion, $idTarjetasGraficas){
+		$consulta = "SELECT * FROM TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos WHERE idTarjetasGraficas = '$idTarjetasGraficas'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarTarjetasGraficasNoImg($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion){
+		$consulta = "UPDATE TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos
+			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
+			Memoria='$Memoria', Benchmark='$Benchmark', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarTarjetasGraficas($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg){
+		$consulta = "UPDATE TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos
+			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
+			Imagen='$nombreImg', Memoria='$Memoria', Benchmark='$Benchmark', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class TarjetasGraficas {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

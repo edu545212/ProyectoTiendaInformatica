@@ -15,6 +15,28 @@
 		return $resultado;
 	}
 
+	function editarPlacasBasesFormulario ($conexion, $idPlacasBases){
+		$consulta = "SELECT * FROM PlacasBases INNER JOIN Productos ON PlacasBases.idProductos = Productos.idProductos WHERE idPlacasBases = '$idPlacasBases'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarPlacasBasesNoImg($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion){
+		$consulta = "UPDATE PlacasBases INNER JOIN Productos ON PlacasBases.idProductos = Productos.idProductos
+			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
+			Chipset='$Chipset', Forma='$Forma' WHERE Nombre = '$Nombre'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarPlacasBases($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion, $nombreImg){
+		$consulta = "UPDATE PlacasBases INNER JOIN Productos ON PlacasBases.idProductos = Productos.idProductos
+			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
+			Imagen='$nombreImg', Chipset='$Chipset', Forma='$Forma' WHERE Nombre = '$Nombre'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class PlacasBases {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

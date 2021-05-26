@@ -15,6 +15,28 @@
 		return $resultado;
 	}
 
+	function editarMemoriasRAMFormulario ($conexion, $idMemoriasRAM){
+		$consulta = "SELECT * FROM MemoriasRAM INNER JOIN Productos ON MemoriasRAM.idProductos = Productos.idProductos WHERE idMemoriasRAM = '$idMemoriasRAM'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarMemoriasRAMNoImg($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion){
+		$consulta = "UPDATE MemoriasRAM INNER JOIN Productos ON MemoriasRAM.idProductos = Productos.idProductos
+			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
+			Almacenamiento='$Almacenamiento', Formato='$Formato', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
+	function editarMemoriasRAM($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg){
+		$consulta = "UPDATE MemoriasRAM INNER JOIN Productos ON MemoriasRAM.idProductos = Productos.idProductos
+			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
+			Imagen='$nombreImg', Almacenamiento='$Almacenamiento', Formato='$Formato', Tipo='$Tipo' WHERE Nombre = '$Nombre'";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	class MemoriasRAM {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

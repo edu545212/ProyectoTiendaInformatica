@@ -54,7 +54,7 @@
                         <td>".$fila["Categoria"]."</td>
                         <td>".$fila["Chipset"]."</td>
                         <td>".$fila["Forma"]."</td>
-                        <td><a href='./EditarU.php?idPlacasBases=".$fila["idPlacasBases"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
+                        <td><a href='./EditarPB.php?idPlacasBases=".$fila["idPlacasBases"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
                         <td><a href='./admin/EliminarU.php?idPlacasBases=".$fila["idPlacasBases"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>
     				</tr>";
 

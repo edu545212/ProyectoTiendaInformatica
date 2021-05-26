@@ -15,7 +15,7 @@
 		return $resultado;
 	}
 
-		function editarDiscosDurosFormulario ($conexion, $idDiscosDuros){
+	function editarDiscosDurosFormulario ($conexion, $idDiscosDuros){
 		$consulta = "SELECT * FROM DiscosDuros INNER JOIN Productos ON DiscosDuros.idProductos = Productos.idProductos WHERE idDiscosDuros = '$idDiscosDuros'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;

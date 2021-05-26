@@ -22,10 +22,10 @@
     $conexion = conectar(true);
     if(empty($archivoImg)) {
         $insertarnoimg = editarProcesadorNoImg($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion);
-        mysqli_query($insertarnoimg);
+        mysqli_query($conexion, $insertarnoimg);
     } else {
         $insertar = editarProcesador($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg);
-        mysqli_query($insertar);
+        mysqli_query($conexion, $insertar);
     }
     header ('Location: ../../admin.php');
 ?>

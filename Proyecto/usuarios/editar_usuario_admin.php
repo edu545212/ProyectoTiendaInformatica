@@ -29,7 +29,7 @@
 
     } else {
         $insertar = EditarUsuarioAdmin($conexion, $usuario, $password, $nombre, $apellido1, $apellido2, $telefono, $email, $CP, $provincia, $CA, $DNI, $ROL, $Direccion);
-        mysqli_query($conexion, $insetar);
+        mysqli_query($conexion, $insertar);
         header ('Location: ../admin.php');
     }
 ?>
