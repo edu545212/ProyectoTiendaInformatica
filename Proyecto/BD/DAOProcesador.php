@@ -109,7 +109,7 @@
 				while ($row = mysqli_fetch_assoc($result)) {
 					$searchResultHTML .= '
 					<div class="card col-md-4 col-lg-3 col-xl-2 mx-1 my-1">
-                    	<img class="card-img-top mx-1 my-4" src="./img/Procesador/'. $row['Imagen'].'" style="width: 90%; height: 150px">
+                    	<img class="card-img-top mx-1 my-4" src="./img/Procesadores/'. $row['Imagen'].'" style="width: 90%; height: 150px">
 						<div class="card-body">
 							<h4 class="card-title text-center">'.$row['Nombre'].'</h4>
 							<p class="card-text text-center">Precio: '.$row['Precio'].'€</p>
