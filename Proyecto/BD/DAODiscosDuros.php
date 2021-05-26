@@ -129,7 +129,7 @@
 							<h4 class="card-title text-center">'.$row['Nombre'].'</h4>
 							<p class="card-text text-center">Precio: '.$row['Precio'].'€</p>
 							<p class="text-center">
-								<a href="infoConsolas.php?idPlataforma='.$row['idPlataforma'].'" class="btn btn-primary btn-sm btn-raised btn-block"><i class="fa fa-plus"></i>&nbsp; Detalles</a>
+								<a href="infoProductos.php?idProductos='.$row['idProductos'].'" class="btn btn-primary btn-sm btn-raised btn-block"><i class="fa fa-plus"></i>&nbsp; Detalles</a>
 							</p>
 						</div>
                 	</div>';
