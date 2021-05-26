@@ -27,7 +27,7 @@
                     <a class="dropdown-item" href="Procesadores.php">Procesadores</a>
                     <a class="dropdown-item" href="PlacasBases.php">Placas Bases</a>
                     <a class="dropdown-item" href="TarjetasGraficas.php">Tarjetas graficas</a>
-                    <a class="dropdown-item" href="MemoriasRam.php">Memorias RAM</a>
+                    <a class="dropdown-item" href="MemoriasRAM.php">Memorias RAM</a>
                     <a class="dropdown-item" href="DiscosDuros.php">Discos duros</a>
                     <a class="dropdown-item" href="Cajas.php">Cajas</a>
                 </div>
