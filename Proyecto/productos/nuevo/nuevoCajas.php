@@ -30,7 +30,7 @@
         </script>';
     } else {
         $insertar = nuevoCajas($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg);
-        mysqli_query($insertar);
+        mysqli_query($conexion, $insertar);
         header ('Location: ../../admin.php');
     }
 ?>

@@ -5,7 +5,8 @@
 		mysqli_query($conexion, $consulta);
 		$idProducto = mysqli_insert_id($conexion);
         $consultaP = "INSERT INTO TarjetasGraficas VALUES (default, '$idProducto', '$Tipo', '$Memoria', '$benchmark')";
-        mysqli_query($conexion, $consultaP);
+        $resultado = mysqli_query($conexion, $consultaP);
+		return $resultado;
 	}
 
 	//funcion para consultar si existe el TarjetasGraficas

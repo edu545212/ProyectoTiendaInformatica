@@ -5,7 +5,8 @@
 		mysqli_query($conexion, $consulta);
 		$idProducto = mysqli_insert_id($conexion);
         $consultaP = "INSERT INTO DiscosDuros VALUES (default, '$idProducto', '$Capacidad', '$Tipo')";
-        mysqli_query($conexion, $consultaP);
+        $resultado = mysqli_query($conexion, $consultaP);
+		return $resultado;
 	}
 
 	//funcion para consultar si existe el DiscosDuros
