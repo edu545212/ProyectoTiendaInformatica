@@ -14,7 +14,7 @@
     //imagen
     $nombreImg = $_FILES['imagen']['name'];
     $archivoImg = $_FILES['imagen']['tmp_name'];
-    $rutaImg ="../../img/Procesador";
+    $rutaImg ="../../img/Procesadores";
     $rutaImg =$rutaImg."/".$nombreImg;
     
     move_uploaded_file($archivoImg,$rutaImg);
