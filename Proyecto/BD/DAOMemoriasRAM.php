@@ -111,6 +111,20 @@
 				AND Marca IN('".$MarcaFilterData."')";
 			}
 
+			if(isset($_POST["Almacenamiento"])) {
+				$AlmacenamientoFilterData = implode("','", $_POST["Almacenamiento"]);
+				$sqlQuery .= "
+				AND Almacenamiento IN('".$AlmacenamientoFilterData."')";
+			}
+
+
+			if(isset($_POST["Formato"])) {
+				$FormatoFilterData = implode("','", $_POST["Formato"]);
+				$sqlQuery .= "
+				AND Formato IN('".$FormatoFilterData."')";
+			}
+
+
 			if(isset($_POST["Tipo"])) {
 				$TipoFilterData = implode("','", $_POST["Tipo"]);
 				$sqlQuery .= "
