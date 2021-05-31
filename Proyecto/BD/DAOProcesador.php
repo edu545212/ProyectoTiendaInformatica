@@ -16,6 +16,12 @@
 		return $resultado;
 	}
 
+	function compProcesadores($conexion){
+		$consulta = "SELECT * FROM Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	function editarProcesadorFormulario ($conexion, $idProcesador){
 		$consulta = "SELECT * FROM Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos WHERE idProcesador = '$idProcesador'";
 		$resultado = mysqli_query($conexion, $consulta);

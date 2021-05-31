@@ -16,6 +16,12 @@
 		return $resultado;
 	}
 
+	function compTarjetasGraficas($conexion){
+		$consulta = "SELECT * FROM TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
+
 	function editarTarjetasGraficasFormulario ($conexion, $idTarjetasGraficas){
 		$consulta = "SELECT * FROM TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos WHERE idTarjetasGraficas = '$idTarjetasGraficas'";
 		$resultado = mysqli_query($conexion, $consulta);
