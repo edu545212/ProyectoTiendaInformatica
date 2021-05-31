@@ -46,7 +46,7 @@
     		$salida.="<tr>
                         <td>".$fila["idProductos"]."</td>
                         <td>".$fila["Nombre"]."</td>
-                        <td>".$fila["Descripcion"]."</td>
+                        <td><div style='width:400px; height:115px; overflow: auto'>".$fila["Descripcion"]."</div></td>
                         <td>".$fila["Precio"]."</td>
                         <td>".$fila["Stock"]."</td>
                         <td>".$fila["Imagen"]."</td>
