@@ -26,14 +26,12 @@
     	$salida.="<table class='tabla_datos table table-striped table-responsive'>
                     <thead>
                         <tr  id='titulo'>
-                            <th>idProductos</th>
                             <th>Nombre</th>
                             <th>Descripcion</th>
                             <th>Precio</th>
                             <th>Stock</th>
                             <th>Imagen</th>
                             <th>Marca</th>
-                            <th>Categoria</th>
                             <th>Tipo</th>
                             <th>Memoria</th>
                             <th>Benchmark</th>
@@ -45,14 +43,12 @@
 
     	while ($fila = $resultado->fetch_assoc()) {
     		$salida.="<tr>
-                        <td>".$fila["idProductos"]."</td>
                         <td>".$fila["Nombre"]."</td>
                         <td><div style='width:400px; height:115px; overflow: auto'>".$fila["Descripcion"]."</div></td>
                         <td>".$fila["Precio"]."</td>
                         <td>".$fila["Stock"]."</td>
                         <td>".$fila["Imagen"]."</td>
                         <td>".$fila["Marca"]."</td>
-                        <td>".$fila["Categoria"]."</td>
                         <td>".$fila["Tipo"]."</td>
                         <td>".$fila["Memoria"]."</td>
                         <td>".$fila["Benchmark"]."</td>

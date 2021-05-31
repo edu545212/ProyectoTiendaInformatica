@@ -26,14 +26,12 @@
     	$salida.="<table class='tabla_datos table table-striped table-responsive'>
                     <thead>
                         <tr  id='titulo'>
-                            <th>idProductos</th>
                             <th>Nombre</th>
                             <th>Descripcion</th>
                             <th>Precio</th>
                             <th>Stock</th>
                             <th>Imagen</th>
                             <th>Marca</th>
-                            <th>Categoria</th>
                             <th>Tipo</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
@@ -43,14 +41,12 @@
 
     	while ($fila = $resultado->fetch_assoc()) {
     		$salida.="<tr>
-                        <td>".$fila["idProductos"]."</td>
                         <td>".$fila["Nombre"]."</td>
                         <td><div style='width:400px; height:115px; overflow: auto'>".$fila["Descripcion"]."</div></td>
                         <td>".$fila["Precio"]."</td>
                         <td>".$fila["Stock"]."</td>
                         <td>".$fila["Imagen"]."</td>
                         <td>".$fila["Marca"]."</td>
-                        <td>".$fila["Categoria"]."</td>
                         <td>".$fila["Tipo"]."</td>
                         <td><a href='./EditarC.php?idCajas=".$fila["idCajas"]."' class='btn btn-raised btn-xs btn-success'>Editar</a></a></td>
                         <td><a href='./productos/eliminar/EliminarC.php?idCajas=".$fila["idCajas"]."' class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>

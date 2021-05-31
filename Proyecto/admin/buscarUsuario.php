@@ -24,7 +24,6 @@
     	$salida.="<table class='tabla_datos table table-striped table-responsive'>
     			<thead>
     				<tr id='titulo'>
-              <th>IdUsuario</th>
               <th>Usuario </th>
               <th>Password </th>
               <th>Rol </th>
@@ -46,7 +45,6 @@
 
     	while ($fila = $resultado->fetch_assoc()) {
     		$salida.="<tr>
-        <td>".$fila["idUsuario"]."</td>
         <td>".$fila["Usuario"]."</td>
         <td>".$fila["Password"]."</td>
         <td>".$fila["Rol"]."</td>
