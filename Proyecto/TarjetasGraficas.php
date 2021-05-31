@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Carrito</title>
+    <title>Tarjetas Graficas</title>
     <?php include './inc/link.php'; ?>
 </head>
 <body>
 <?php include './inc/nav.php'; ?>
         <main>
             <div class="container-fluid">		
-                <h2>TarjetasGraficas</h2>
+                <h2>Tarjetas Graficas</h2>
                 <?php
                 include './BD/DAOTarjetasGraficas.php';
                 $product = new TarjetasGraficas();	

@@ -6,7 +6,7 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Consolas</title>
+    <title>Información del producto</title>
     <?php include './inc/link.php'; ?>
 </head>
 <body>

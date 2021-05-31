@@ -4,7 +4,7 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Carrito</title>
+    <title>Comparativas Procesador</title>
     <?php include './inc/link.php'; ?>
 </head>
 <body>

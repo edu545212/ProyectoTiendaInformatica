@@ -14,7 +14,7 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Editar TarjetasGraficas</title>
+    <title>Editar Tarjetas Graficas</title>
     <?php include './inc/link.php'; ?>
 </head>
 <body>

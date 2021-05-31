@@ -14,7 +14,7 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Editar PlacasBases</title>
+    <title>Editar Placas Bases</title>
     <?php include './inc/link.php'; ?>
 </head>
 <body>
@@ -23,7 +23,7 @@
             <form name="formulario" method="post" action="./productos/editar/editarPlacasBases.php" id="loginform" enctype="multipart/form-data">
                 <div class="container row justify-content-center">
 
-                    <h1 class="col-8 text-center">Editar PlacasBases</h1>
+                    <h1 class="col-8 text-center">Editar Placas Bases</h1>
 
                     <?php
                         $conexion = conectar(true);

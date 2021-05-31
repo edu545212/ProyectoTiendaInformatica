@@ -14,7 +14,7 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Nuevo PlacasBases</title>
+    <title>Nuevo Placas Bases</title>
     <?php include './inc/link.php'; ?>
 </head>
 <body>

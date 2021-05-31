@@ -14,7 +14,7 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Editar DiscosDuros</title>
+    <title>Editar Discos Duros</title>
     <?php include './inc/link.php'; ?>
 </head>
 <body>
@@ -23,7 +23,7 @@
             <form name="formulario" method="post" action="./productos/editar/editarDiscosDuros.php" id="loginform" enctype="multipart/form-data">
                 <div class="container row justify-content-center">
 
-                    <h1 class="col-8 text-center">Editar DiscosDuros</h1>
+                    <h1 class="col-8 text-center">Editar Discos Duros</h1>
 
                     <?php
                         $conexion = conectar(true);

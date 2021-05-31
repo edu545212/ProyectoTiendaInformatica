@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Carrito</title>
+    <title>Discos Duros</title>
     <?php include './inc/link.php'; ?>
 </head>
 <body>
 <?php include './inc/nav.php'; ?>
         <main>
             <div class="container-fluid">		
-                <h2>DiscosDuros</h2>
+                <h2>Discos Duros</h2>
                 <?php
                 include './BD/DAODiscosDuros.php';
                 $product = new DiscosDuros();	

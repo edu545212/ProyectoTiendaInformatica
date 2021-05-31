@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Carrito</title>
+    <title>Placas Bases</title>
     <?php include './inc/link.php'; ?>
 </head>
 <body>
 <?php include './inc/nav.php'; ?>
         <main>
             <div class="container-fluid">		
-                <h2>PlacasBases</h2>
+                <h2>Placas Bases</h2>
                 <?php
                 include './BD/DAOPlacasBases.php';
                 $product = new PlacasBases();	
