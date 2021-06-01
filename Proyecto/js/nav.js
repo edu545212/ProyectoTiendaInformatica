@@ -15,7 +15,7 @@ prevScrollpos = currentScrollpos;
 
 }
 
-
+//loader del index
 $(document).ready(function() {
 	
 	setTimeout(function(){

@@ -1,3 +1,4 @@
+//funcion que se encarga de seleccionar los paneles y mostrar los datos
 function SeleccionarPanel(evt, Panel) {
   // Declarar variables
   var i, tabcontent, tablinks;
@@ -19,6 +20,7 @@ function SeleccionarPanel(evt, Panel) {
   evt.currentTarget.className += " active";
 }
 
+//confirmacion de eliminar
 function ConfirmarEliminar(){
   let respuesta = confirm("Estas seguro que deseas eliminar el campo");
   if(respuesta == true){

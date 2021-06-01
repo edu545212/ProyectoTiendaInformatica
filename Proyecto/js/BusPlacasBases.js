@@ -1,5 +1,6 @@
 $(buscarDatosPlacasBases());
 
+//funcion para buscar datos
 function buscarDatosPlacasBases(consulta){
 	$.ajax({
 		url: './admin/buscarPlacasBases.php' ,

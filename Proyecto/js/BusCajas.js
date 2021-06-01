@@ -1,5 +1,6 @@
 $(buscarDatosCajas());
 
+//funcion para buscar datos
 function buscarDatosCajas(consulta){
 	$.ajax({
 		url: './admin/buscarCajas.php' ,

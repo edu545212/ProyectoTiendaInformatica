@@ -1,5 +1,6 @@
 $(buscarDatosDiscosDuros());
 
+//funcion para buscar datos
 function buscarDatosDiscosDuros(consulta){
 	$.ajax({
 		url: './admin/buscarDiscosDuros.php' ,

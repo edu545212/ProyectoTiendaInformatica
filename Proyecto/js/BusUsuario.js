@@ -1,5 +1,6 @@
 $(buscarDatosUsuario());
 
+//funcion para buscar datos
 function buscarDatosUsuario(consulta){
 	$.ajax({
 		url: './admin/buscarUsuario.php' ,

@@ -1,5 +1,6 @@
 $(buscarDatosTarjetasGraficas());
 
+//funcion para buscar datos
 function buscarDatosTarjetasGraficas(consulta){
 	$.ajax({
 		url: './admin/buscarTarjetasGraficas.php' ,

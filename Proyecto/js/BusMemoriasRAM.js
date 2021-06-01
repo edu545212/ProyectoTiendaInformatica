@@ -1,5 +1,6 @@
 $(buscarDatosMemoriasRAM());
 
+//funcion para buscar datos
 function buscarDatosMemoriasRAM(consulta){
 	$.ajax({
 		url: './admin/buscarMemoriasRAM.php' ,

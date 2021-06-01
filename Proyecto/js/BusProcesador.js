@@ -1,5 +1,6 @@
 $(buscarDatosProcesador());
 
+//funcion para buscar datos
 function buscarDatosProcesador(consulta){
 	$.ajax({
 		url: './admin/buscarProcesador.php' ,
