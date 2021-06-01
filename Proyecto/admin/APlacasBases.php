@@ -14,11 +14,13 @@
     </div>
     <br>
 
+    <!--Caja de busqueda-->
     <div class="formulario">
         <label for="caja_busqueda_PlacasBases">Buscar</label>
         <input type="text" name="caja_busqueda_PlacasBases" id="caja_busqueda_PlacasBases"></input>
     </div>
 
+    <!--Tabla-->
     <div id="datosPlacasBases"></div>
 </section>
 

@@ -1,5 +1,6 @@
 <?php
 	
+	//funcion que se usa para conectarse a la base de datos
 	function conectar($esRemota){
 		if ($esRemota){
 			$servidor = "leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com";

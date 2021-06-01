@@ -16,18 +16,21 @@
 		return $resultado;
 	}
 
+	//funcion que sirve para obtener los datos de los procesadores
 	function compProcesadores($conexion){
 		$consulta = "SELECT * FROM Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
+	//funcion que se encarga de mostrar los datos de un procesador en concreto
 	function editarProcesadorFormulario ($conexion, $idProcesador){
 		$consulta = "SELECT * FROM Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos WHERE idProcesador = '$idProcesador'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
+	//funcion que edita los datos del procesador sin imagen
 	function editarProcesadorNoImg($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $idProcesador){
 		$consulta = "UPDATE Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -36,6 +39,7 @@
 		return $resultado;
 	}
 
+	//funcion que edita los datos del procesador con imagen
 	function editarProcesador($conexion, $Nombre, $Marca, $Soket, $benchmark, $Stock, $Precio, $Descripcion, $nombreImg, $idProcesador){
 		$consulta = "UPDATE Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -44,6 +48,7 @@
 		return $resultado;
 	}
 
+	//funcion que elimina un procesador
 	function eliminarProcesador($conexion, $idProcesador){
 		$consulta = "DELETE Procesador, Productos FROM Procesador INNER JOIN Productos ON Procesador.idProductos = Productos.idProductos
 			WHERE Procesador.idProcesador= '$idProcesador'";
@@ -51,6 +56,7 @@
 		return $resultado;
 	}
 
+	//funcion que se encarga de hacer los filtros y mostrar los datos en funcion de los filtros
 	class Procesador {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

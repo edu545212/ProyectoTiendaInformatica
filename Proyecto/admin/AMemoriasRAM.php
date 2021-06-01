@@ -14,11 +14,13 @@
     </div>
     <br>
 
+    <!--Caja de busqueda-->
     <div class="formulario">
         <label for="caja_busqueda_MemoriasRAM">Buscar</label>
         <input type="text" name="caja_busqueda_MemoriasRAM" id="caja_busqueda_MemoriasRAM"></input>
     </div>
 
+    <!--Tabla-->
     <div id="datosMemoriasRAM"></div>
 </section>
 

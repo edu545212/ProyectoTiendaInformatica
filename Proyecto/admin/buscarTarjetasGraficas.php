@@ -4,7 +4,7 @@
   	$contraseña = "SoyEduardo1";
   	$bd = "TiendaInformatica";
 
-	$conn = new mysqli($servidor, $usuario, $contraseña, $bd);
+  	$conn = new mysqli($servidor, $usuario, $contraseña, $bd);
       if($conn->connect_error){
         die("Conexión fallida: ".$conn->connect_error);
       }

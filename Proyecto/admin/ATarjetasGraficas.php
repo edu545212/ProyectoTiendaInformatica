@@ -14,11 +14,13 @@
     </div>
     <br>
 
+    <!--Caja de busqueda-->
     <div class="formulario">
         <label for="caja_busqueda_TarjetasGraficas">Buscar</label>
         <input type="text" name="caja_busqueda_TarjetasGraficas" id="caja_busqueda_TarjetasGraficas"></input>
     </div>
 
+    <!--Tabla-->
     <div id="datosTarjetasGraficas"></div>
 </section>
 

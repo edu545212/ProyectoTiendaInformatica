@@ -14,11 +14,13 @@
     </div>
     <br>
 
+    <!--Caja de busqueda-->
     <div class="formulario">
         <label for="caja_busqueda_Procesador">Buscar</label>
         <input type="text" name="caja_busqueda_Procesador" id="caja_busqueda_Procesador"></input>
     </div>
 
+    <!--Tabla-->
     <div id="datosProcesador"></div>
 </section>
 

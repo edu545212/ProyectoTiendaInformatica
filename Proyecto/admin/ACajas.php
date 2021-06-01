@@ -14,12 +14,15 @@
     </div>
     <br>
 
+    <!--Caja de busqueda-->
     <div class="formulario">
         <label for="caja_busqueda_Cajas">Buscar</label>
         <input type="text" name="caja_busqueda_Cajas" id="caja_busqueda_Cajas"></input>
     </div>
 
+    <!--Tabla-->
     <div id="datosCajas"></div>
+    
 </section>
 
 <script type="text/javascript" src="./js/jquery.min.js"></script>
