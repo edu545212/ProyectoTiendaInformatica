@@ -10,10 +10,12 @@
       }
 
     $salida = "";
-
+    
+    //cuando no hay nada en el buscador
     $query = "SELECT * FROM MemoriasRAM INNER JOIN Productos
 		ON MemoriasRAM.idProductos = Productos.idProductos";
 
+    //cuando existe algo en el buscador
     if (isset($_POST['consulta'])) {
     	$busquedaMemoriasRAM = $conn->real_escape_string($_POST['consulta']);
     	$query = "SELECT * FROM MemoriasRAM INNER JOIN Productos

@@ -10,10 +10,12 @@
       }
 
     $salida = "";
-
+    
+    //cuando no hay nada en el buscador
     $query = "SELECT * FROM Procesador INNER JOIN Productos
 		ON Procesador.idProductos = Productos.idProductos";
 
+    //cuando existe algo en el buscador
     if (isset($_POST['consulta'])) {
     	$busquedaProcesador = $conn->real_escape_string($_POST['consulta']);
     	$query = "SELECT * FROM Procesador INNER JOIN Productos

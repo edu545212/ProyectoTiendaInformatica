@@ -11,9 +11,11 @@
 
     $salida = "";
 
+    //cuando no hay nada en el buscador
     $query = "SELECT * FROM Cajas INNER JOIN Productos
 		ON Cajas.idProductos = Productos.idProductos";
 
+    //cuando existe algo en el buscador
     if (isset($_POST['consulta'])) {
     	$busquedaCajas = $conn->real_escape_string($_POST['consulta']);
     	$query = "SELECT * FROM Cajas INNER JOIN Productos

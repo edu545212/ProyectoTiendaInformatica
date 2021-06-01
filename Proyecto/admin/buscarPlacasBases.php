@@ -10,10 +10,12 @@
       }
 
     $salida = "";
-
+    
+    //cuando no hay nada en el buscador
     $query = "SELECT * FROM PlacasBases INNER JOIN Productos
 		ON PlacasBases.idProductos = Productos.idProductos";
 
+    //cuando existe algo en el buscador
     if (isset($_POST['consulta'])) {
     	$busquedaPlacasBases = $conn->real_escape_string($_POST['consulta']);
     	$query = "SELECT * FROM PlacasBases INNER JOIN Productos

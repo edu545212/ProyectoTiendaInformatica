@@ -10,9 +10,11 @@
       }
 
     $salida = "";
-
+    
+    //cuando no hay nada en el buscador
     $query = "SELECT * FROM Usuario WHERE idUsuario NOT LIKE '' ORDER By idUsuario";
-
+    
+    //cuando existe algo en el buscador
     if (isset($_POST['consulta'])) {
     	$busquedaUsuario = $conn->real_escape_string($_POST['consulta']);
     	$query = "SELECT * FROM Usuario WHERE idUsuario LIKE '%$busquedaUsuario%' OR Usuario LIKE '%$busquedaUsuario%' OR Nombre LIKE '%$busquedaUsuario%' OR Apellido1 LIKE '%$busquedaUsuario%' OR Apellido2 LIKE '%$busquedaUsuario%' OR Telefono LIKE '%$busquedaUsuario%' OR Email LIKE '%$busquedaUsuario%' OR CP LIKE '%$busquedaUsuario%' OR DNI LIKE '%$busquedaUsuario%' OR Provincia LIKE '%$busquedaUsuario%' OR ComunidadAutonoma LIKE '%$busquedaUsuario%' OR Direccion LIKE '%$busquedaUsuario%' OR Rol LIKE '%$busquedaUsuario%'";
