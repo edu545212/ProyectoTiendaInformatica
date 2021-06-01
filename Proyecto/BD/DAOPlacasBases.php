@@ -15,13 +15,15 @@
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
-
+	
+	//Funcion que se encarga de mostrar los datos de una placa base
 	function editarPlacasBasesFormulario ($conexion, $idPlacasBases){
 		$consulta = "SELECT * FROM PlacasBases INNER JOIN Productos ON PlacasBases.idProductos = Productos.idProductos WHERE idPlacasBases = '$idPlacasBases'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
+	//funcion que se encarga de editar una placa base sin imagen
 	function editarPlacasBasesNoImg($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion, $idPlacasBases){
 		$consulta = "UPDATE PlacasBases INNER JOIN Productos ON PlacasBases.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -30,6 +32,7 @@
 		return $resultado;
 	}
 
+	//funcion que se encarga de editar una placa base
 	function editarPlacasBases($conexion, $Nombre, $Marca, $Chipset, $Forma, $Stock, $Precio, $Descripcion, $nombreImg, $idPlacasBases){
 		$consulta = "UPDATE PlacasBases INNER JOIN Productos ON PlacasBases.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -37,7 +40,8 @@
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
-
+	
+	//funcion que se encarga de eliminar una placa base
 	function eliminarPlacasBases($conexion, $idPlacasBases){
 		$consulta = "DELETE PlacasBases, Productos FROM PlacasBases INNER JOIN Productos ON PlacasBases.idProductos = Productos.idProductos
 		WHERE PlacasBases.idPlacasBases= '$idPlacasBases'";
@@ -45,6 +49,7 @@
 		return $resultado;
 	}
 
+	//funcion que se encarga de filtrar las placas bases y mostrar los datos
 	class PlacasBases {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

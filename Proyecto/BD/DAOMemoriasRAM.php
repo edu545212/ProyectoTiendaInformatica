@@ -16,12 +16,14 @@
 		return $resultado;
 	}
 
+	//funcion que se encarga de mostrar los datos de una memoria ram en concreto
 	function editarMemoriasRAMFormulario ($conexion, $idMemoriasRAM){
 		$consulta = "SELECT * FROM MemoriasRAM INNER JOIN Productos ON MemoriasRAM.idProductos = Productos.idProductos WHERE idMemoriasRAM = '$idMemoriasRAM'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
+	//funcion que se encarga de editar la memoria ram sin imagen
 	function editarMemoriasRAMNoImg($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion, $idMemoriasRAM){
 		$consulta = "UPDATE MemoriasRAM INNER JOIN Productos ON MemoriasRAM.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -30,6 +32,7 @@
 		return $resultado;
 	}
 
+	//funcion que se encarga de editar la memoria ram
 	function editarMemoriasRAM($conexion, $Nombre, $Marca, $Almacenamiento, $Formato, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg, $idMemoriasRAM){
 		$consulta = "UPDATE MemoriasRAM INNER JOIN Productos ON MemoriasRAM.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -38,6 +41,7 @@
 		return $resultado;
 	}
 
+	//funcion que elimina la memoria ram
 	function eliminarMemoriasRAM($conexion, $idMemoriasRAM){
 		$consulta = "DELETE MemoriasRAM, Productos FROM MemoriasRAM INNER JOIN Productos ON MemoriasRAM.idProductos = Productos.idProductos
 		WHERE MemoriasRAM.idMemoriasRAM= '$idMemoriasRAM'";
@@ -45,6 +49,7 @@
 		return $resultado;
 	}
 
+	//funcion que se encarga de filtrar los datos de la memoria ram y mostrarlos
 	class MemoriasRAM {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

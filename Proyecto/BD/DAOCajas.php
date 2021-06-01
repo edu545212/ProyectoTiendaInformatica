@@ -16,12 +16,14 @@
 		return $resultado;
 	}
 
+	//funcion que muestra todos los datos de una caja
 	function editarCajasFormulario ($conexion, $idCajas){
 		$consulta = "SELECT * FROM Cajas INNER JOIN Productos ON Cajas.idProductos = Productos.idProductos WHERE idCajas = '$idCajas'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
+	//funcion que edita una caja sin imagen
 	function editarCajasNoImg($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion, $idCajas){
 		$consulta = "UPDATE Cajas INNER JOIN Productos ON Cajas.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -30,6 +32,7 @@
 		return $resultado;
 	}
 
+	//funcion que edita una caja 
 	function editarCajas($conexion, $Nombre, $Marca, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg, $idCajas){
 		$consulta = "UPDATE Cajas INNER JOIN Productos ON Cajas.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -38,6 +41,7 @@
 		return $resultado;
 	}
 
+	//funcion que elimina una caja
 	function eliminarCajas($conexion, $idCajas){
 		$consulta = "DELETE Cajas, Productos FROM Cajas INNER JOIN Productos ON Cajas.idProductos = Productos.idProductos
 		WHERE Cajas.idCajas= '$idCajas'";
@@ -45,6 +49,7 @@
 		return $resultado;
 	}
 
+	//funcion que se encarga de los filtros de las cajas y mostrar los datos
 	class Cajas {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

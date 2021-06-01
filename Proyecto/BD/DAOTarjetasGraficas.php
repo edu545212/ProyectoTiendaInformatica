@@ -16,18 +16,21 @@
 		return $resultado;
 	}
 
+	////funcion que se encarga de obtener los datos de las tarjetas graficas
 	function compTarjetasGraficas($conexion){
 		$consulta = "SELECT * FROM TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
+	//funcion que se encarga de obtener los datos de una tarjeta grafica en concreto
 	function editarTarjetasGraficasFormulario ($conexion, $idTarjetasGraficas){
 		$consulta = "SELECT * FROM TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos WHERE idTarjetasGraficas = '$idTarjetasGraficas'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
+	//funcion que se encarga de editar una tarjeta grafica sin imagen
 	function editarTarjetasGraficasNoImg($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion, $idTarjetasGraficas){
 		$consulta = "UPDATE TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -36,6 +39,7 @@
 		return $resultado;
 	}
 
+	//funcion que se encarga de editar una tarjeta grafica 
 	function editarTarjetasGraficas($conexion, $Nombre, $Marca, $Memoria, $Benchmark, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg, $idTarjetasGraficas){
 		$consulta = "UPDATE TarjetasGraficas INNER JOIN Productos ON TarjetasGraficas.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -51,6 +55,7 @@
 		return $resultado;
 	}
 
+	//funcion que se encarga de filtrar las tarjetas graficas y mostrar los datos
 	class TarjetasGraficas {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';

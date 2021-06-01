@@ -16,12 +16,14 @@
 		return $resultado;
 	}
 
+	//funcion que se encarga mostrar los datos de un disco duro
 	function editarDiscosDurosFormulario ($conexion, $idDiscosDuros){
 		$consulta = "SELECT * FROM DiscosDuros INNER JOIN Productos ON DiscosDuros.idProductos = Productos.idProductos WHERE idDiscosDuros = '$idDiscosDuros'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
+	//funcion que edita un disco duro sin imagen
 	function editarDiscosDurosNoImg($conexion, $Nombre, $Marca, $Capacidad, $Tipo, $Stock, $Precio, $Descripcion, $idDiscosDuros){
 		$consulta = "UPDATE DiscosDuros INNER JOIN Productos ON DiscosDuros.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -30,6 +32,7 @@
 		return $resultado;
 	}
 
+	//funcion que edita un disco duro
 	function editarDiscosDuros($conexion, $Nombre, $Marca, $Capacidad, $Tipo, $Stock, $Precio, $Descripcion, $nombreImg, $idDiscosDuros){
 		$consulta = "UPDATE DiscosDuros INNER JOIN Productos ON DiscosDuros.idProductos = Productos.idProductos
 			SET Nombre='$Nombre', Marca='$Marca', Stock='$Stock', Precio='$Precio', Descripcion='$Descripcion',
@@ -38,6 +41,7 @@
 		return $resultado;
 	}
 
+	//funcion que elimina un disco duro
 	function eliminarDiscosDuros($conexion, $idDiscosDuros){
 		$consulta = "DELETE DiscosDuros, Productos FROM DiscosDuros INNER JOIN Productos ON DiscosDuros.idProductos = Productos.idProductos
 		WHERE DiscosDuros.idDiscosDuros= '$idDiscosDuros'";
@@ -45,6 +49,7 @@
 		return $resultado;
 	}
 
+	//funcion que se encarga de los filtros de los discos duros y mostrar sus datos
 	class DiscosDuros {
 		private $host  = 'leonmunozeduardo-db.c0iucejz0d7p.eu-west-3.rds.amazonaws.com';
 		private $user  = 'EduardoRTX';
