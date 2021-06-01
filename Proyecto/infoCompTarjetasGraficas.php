@@ -34,6 +34,7 @@
                 <?php
                     }
                 ?>
+                <img src="./img/versus.png" alt="versus" width="10%" height="10%" class="col-md-1  align-self-center">
                 <?php
                     $TarjetasGraficas2 = $_POST["TarjetasGraficas2"];
                     $consulta= editarTarjetasGraficasFormulario($conexion, $TarjetasGraficas2);

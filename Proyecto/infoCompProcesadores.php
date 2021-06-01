@@ -34,6 +34,7 @@
                 <?php
                     }
                 ?>
+                <img src="./img/versus.png" alt="versus" width="10%" height="10%" class="col-md-1  align-self-center">
                 <?php
                     $procesador2 = $_POST["Procesador2"];
                     $consulta= editarProcesadorFormulario($conexion, $procesador2);

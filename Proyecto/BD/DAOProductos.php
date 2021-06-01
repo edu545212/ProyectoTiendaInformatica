@@ -5,4 +5,10 @@
         return $resultado;
     }
 
+    function infoProductosCarrousel($conexion){
+        $consulta = "SELECT * FROM Productos ORDER BY rand() LIMIT 3";
+        $resultado = mysqli_query($conexion, $consulta);
+        return $resultado;
+    }
+
 ?>
