@@ -14,6 +14,8 @@
     <?php include './inc/link.php'; ?>
 </head>
 <body>
+    <script src="https://www.paypal.com/sdk/js?client-id=Ad8b1vLxVFIYHrQ8WJbo4oVTfVBUOqx3NuCzSp5k6ifO8rkKnV6MUw82qX4geSH7mb11A8kU4Z6iMOiL&currency=EUR">
+    </script>
     <?php include './inc/nav.php'; ?>
         <main>
         <?php 
@@ -32,6 +34,7 @@
                     <?php
                         if(isset($_GET["status"])){
                             if($_GET["status"] === "1"){
+                                unset($_SESSION['carrito']);
                                 ?>
                                     <div class="alert alert-success">
                                         <strong>Venta realizada correctamente</strong>
@@ -73,7 +76,6 @@
                     <br><br>
 
                     <!-- Generamos una tabla que muestre productos -->
-                    <form action="./pagar.php" method="POST">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -104,12 +106,29 @@
                         </tbody>
                     </table>
                         <h3>Total: <?php echo '' . $totalt . '€' ?></h3>
-                        <input name="total" type="hidden" value="<?php echo $granTotal;?>">
-                        <button type="submit" name="submitPayment" class="btn btn-success">Pagar</button>
+                        <div id="paypal-button-container"></div>
                         <a href="./carrito/vaciarCarrito.php" class="btn btn-danger">Vaciar carrito</a>
                     </form>
                 </div><br>
         </main>
     <?php include './inc/footer.php'; ?>
+    <script>
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: "<?php echo $totalt;?>"
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+             window.location.href="./carrito.php?status=1";
+          });
+        }
+      }).render('#paypal-button-container'); // Display payment options on your web page
+    </script>
 </body>
 </html>
