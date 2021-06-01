@@ -37,8 +37,8 @@
                         <?php
                         if($fila['Stock']>=1){
                             if($_SESSION['Rol']!=""){
-                                echo '<form action="carrito.php" method="POST" class="FormCatElec" data-form="">
-                                    <input type="hidden" value="'.$fila['idProductos'].'" name="codigo">
+                                echo '<form action="./carrito/agregarCarrito.php" method="POST" class="FormCatElec" data-form="">
+                                    <input type="hidden" value="'.$fila['idProductos'].'" name="idProductos">
                                     <label class="text-center"><small>Agrega la cantidad de productos que añadiras al carrito de compras (Maximo '.$fila['Stock'].' productos)</small></label>
                                     <div class="form-group">
                                         <input type="number" class="form-control" value="1" min="1" max="'.$fila['Stock'].'" name="cantidad">

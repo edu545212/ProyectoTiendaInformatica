@@ -1,6 +1,5 @@
 <?php 
     session_start();
-    error_reporting(0);
 ?>
 
 <nav class="navbar navbar-expand-md navbar-light bg-info fixed-top" id="navbar">
