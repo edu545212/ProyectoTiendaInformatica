@@ -26,7 +26,7 @@
 
                     <div class="col-12 col-sm-6">
                         <br><br><br>
-                        <img style="width:600px; height:300px" class="img-fluid img-thumbnail rounded" alt="Productos" src="./img/<?php echo $fila['Categoria']; ?>/<?php echo $fila['Imagen'];?>">
+                        <img style="width:600px; height:400px" class="img-fluid img-thumbnail rounded" alt="Productos" src="./img/<?php echo $fila['Categoria']; ?>/<?php echo $fila['Imagen'];?>">
                     </div>
                     
                     <div class="col-12 col-sm-6">

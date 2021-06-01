@@ -12,7 +12,7 @@
 <body>
     <?php include './inc/nav.php'; ?>
         <main>
-            <form name="formulario" method="post" action="./admin/Nuevo_videojuegoyplataforma.php" id="loginform" enctype="multipart/form-data">
+            <form name="formulario" method="post" action="./infoCompProcesadores.php" id="loginform" enctype="multipart/form-data">
                 <div class="container row justify-content-center">
                     <h1 class="col-8 text-center">Comparativas de procesadores</h1>
                     <?php
@@ -21,8 +21,8 @@
                         $consulta= compProcesadores($conexion);
                     ?>
                     <div class="form-group col-8 col-md-5">
-                        <label for="Procesadores" class="visually-hidden">Procesador 1</label>
-                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="Procesador">
+                        <label for="Procesador1">Procesador 1</label>
+                        <select class="custom-select my-1 mr-sm-2" id="Procesador1" name="Procesador1">
                             <?php 
                                 while($fila=mysqli_fetch_array($consulta)){
                                     echo '<option value='.$fila['idProcesador'].'>'.$fila['Nombre'].'</option>';
@@ -31,13 +31,11 @@
                         </select>
                     </div>
                     <?php
-                        $conexion = conectar(true);
-                        //Lanzamos la consulta
                         $consulta= compProcesadores($conexion);
                     ?>
                     <div class="form-group col-8 col-md-5">
-                        <label for="Procesadores" class="visually-hidden">Procesador 2</label>
-                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="Procesador">
+                        <label for="Procesador2">Procesador 2</label>
+                        <select class="custom-select my-1 mr-sm-2" id="Procesador2" name="Procesador2">
                             <?php 
                                 while($fila=mysqli_fetch_array($consulta)){
                                     echo '<option value='.$fila['idProcesador'].'>'.$fila['Nombre'].'</option>';
