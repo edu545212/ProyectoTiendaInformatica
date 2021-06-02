@@ -14,6 +14,24 @@
 	<meta charset="UTF-8">
     <title>Iniciar Sesion</title>
     <?php include './inc/link.php'; ?>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdRWgobAAAAAEYlTxa1600zle-223DMqUziGWLz"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#entrar').click(function() {
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LdRWgobAAAAAEYlTxa1600zle-223DMqUziGWLz', {
+                        action: 'validarUsuario'
+                        }).then(function(token) {
+                        $('#loginform').prepend('<input type="hidden" name="token" value="' + token + '" >');
+                        $('#loginform').prepend('<input type="hidden" name="action" value="validarUsuario" >');
+                        $('#loginform').submit();
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <?php include './inc/nav.php'; ?>
@@ -30,8 +48,9 @@
 
                         <label for="Password" class="visually-hidden">Contraseña</label>
                         <input id="password" type="password" class="form-control" name="password" placeholder="Contraseña" required>
+
                         <p class="mt-5 mb-3 text-muted"></p>
-                        <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesion</button>
+                        <button class="w-100 btn btn-lg btn-primary" id="entrar" type="button">Iniciar sesion</button>
                         <p class="mt-5 mb-3 text-muted"></p>
 
                     </form>
@@ -52,5 +71,7 @@
     </div>
     </main>
     <?php include './inc/footer.php'; ?>
+
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
 </body>
 </html>
