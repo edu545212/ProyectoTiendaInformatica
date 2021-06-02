@@ -3,7 +3,7 @@
     require "../../BD/DAODiscosDuros.php";
 
     //Recogemos los valores del formulario.
-    $idDiscosDuros=$_POST['$idDiscosDuros'];
+    $idDiscosDuros=$_POST['idDiscosDuros'];
     $Nombre = $_POST["Nombre"];
     $Marca = $_POST["Marca"];
     $Capacidad = $_POST["Capacidad"];
