@@ -14,6 +14,12 @@
     <?php include './inc/link.php'; ?>
 </head>
 <body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Registro</li>
+        </ol>
+    </nav>
     <?php include './inc/nav.php'; ?>
         <main>
             <form name="formulario" method="post" action="./usuarios/registrar_usuario.php" id="loginform" onsubmit="return validarFormulario();">

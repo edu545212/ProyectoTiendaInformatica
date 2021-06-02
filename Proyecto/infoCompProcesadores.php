@@ -10,6 +10,13 @@
     <?php include './inc/link.php'; ?>
 </head>
 <body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+            <li class="breadcrumb-item"><a href="CompProcesadores.php">Comparativas</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Info Comparativas</li>
+        </ol>
+    </nav>
     <?php include './inc/nav.php'; ?>
         <main>
             <div class="container-fluid row justify-content-center">

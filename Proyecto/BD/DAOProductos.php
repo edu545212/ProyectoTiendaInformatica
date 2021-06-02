@@ -13,4 +13,11 @@
         return $resultado;
     }
 
+    //funcion que se usa en el carrousel y obtiene los datos de 3 productos aleatorios
+    function UltimosProductosCarrousel($conexion){
+        $consulta = "SELECT * FROM Productos ORDER BY idProductos DESC LIMIT 3";
+        $resultado = mysqli_query($conexion, $consulta);
+        return $resultado;
+    }
+
 ?>

@@ -15,7 +15,13 @@
 </head>
 <body>
     <script src="https://www.paypal.com/sdk/js?client-id=Ad8b1vLxVFIYHrQ8WJbo4oVTfVBUOqx3NuCzSp5k6ifO8rkKnV6MUw82qX4geSH7mb11A8kU4Z6iMOiL&currency=EUR">
-    </script>
+    </script>    
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Carrito</li>
+        </ol>
+    </nav>
     <?php include './inc/nav.php'; ?>
         <main>
         <?php 

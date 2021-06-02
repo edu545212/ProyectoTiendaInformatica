@@ -10,18 +10,25 @@
     <?php include './inc/link.php'; ?>
 </head>
 <body>
+    <?php
+        $conexion = conectar(true);
+        $idProductos=($_GET['idProductos']);
+        $productoinfo= infoProductos($conexion, $idProductos);
+        while($fila=mysqli_fetch_array($productoinfo)){
+    ?> 
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo $fila['Categoria']; ?>.php">Tienda</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Info Productos</li>
+        </ol>
+    </nav>
     <?php include './inc/nav.php'; ?>
         <main>
         <div class="container">
             <div class="row">
                 <div class="page-header">
-                </div>
-                <?php
-                    $conexion = conectar(true);
-                    $idProductos=($_GET['idProductos']);
-                    $productoinfo= infoProductos($conexion, $idProductos);
-                    while($fila=mysqli_fetch_array($productoinfo)){
-                ?>  
+                </div> 
                     <h1 class="col-12 text-center mb-2">Información de producto</h1>
 
                     <div class="col-12 col-sm-6">
