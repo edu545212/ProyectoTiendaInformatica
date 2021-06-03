@@ -1,6 +1,8 @@
 <?php
 	require "./BD/conector_bd.php";
 	require "./BD/DAOProductos.php";
+    require "./BD/DAOComentarios.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,6 +15,11 @@
     <?php
         $conexion = conectar(true);
         $idProductos=($_GET['idProductos']);
+
+        $sql = "SELECT AVG(`Valoracion`) AS Valoracion FROM Comentarios WHERE idProducto = '$idProductos'";
+        $result = mysqli_query($conexion, $sql);
+        $row = mysqli_fetch_object($result) ;
+
         $productoinfo= infoProductos($conexion, $idProductos);
         while($fila=mysqli_fetch_array($productoinfo)){
     ?> 
@@ -73,6 +80,76 @@
                 <?php
                     }   
                 ?>
+                <?php
+                    if($_SESSION['Rol']="admin" || $_SESSION['Rol']="usuario"){
+                        echo '<form name="formulario" method="post" action="./productos/nuevo/nuevoComentario.php" id="loginform">
+                        <div class="container row justify-content-center">
+    
+                            <div class="form-group col-8 col-md-8 hidden">
+                                <label for="idProducto" class="visually-hidden">idProducto</label>
+                                <input id="idProducto" type="text" class="form-control" value="'.$idProductos.'" name="idProducto" placeholder="idProducto" required>
+                            </div> 
+    
+                            <div class="form-group col-8 col-md-8 hidden">
+                                <label for="idUsuario" class="visually-hidden">idUsuario</label>
+                                <input id="idUsuario" type="text" class="form-control" value="'.$_SESSION['idUsuario'].'" name="idUsuario" placeholder="idUsuario" required>
+                            </div> 
+    
+                            <div class="form-group col-8 col-md-8">
+                                <label for="Comentario" class="visually-hidden">Comentario</label>
+                                <input id="Comentario" type="text" class="form-control" name="Comentario" placeholder="Comentario" required>
+                            </div>
+    
+                            <div class="form-group col-8 col-md-8">
+                                <label for="Valoracion">Valoracion (1 al 10):</label>
+                                <input type="range" id="Valoracion" name="Valoracion" min="1" max="10">
+                            </div> 
+                            <p>Media de valoraciones: '.$row->Valoracion.' </p>
+    
+                            <button class="col-8 col-md-5 btn btn-primary" type="submit">Enviar comentario</button>
+                        </div>
+                    </form>';
+                    } else {
+                        echo '';
+                    }
+                ?>
+
+                <div class="col-12">
+                    <h1>Comentarios</h1>
+                    <br>
+                    <table class="table table-striped table-responsive">
+                        <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Comentario</th>
+                            <th>Valoracion</th>
+                            <th>Eliminar</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                            $conexion = conectar(true);
+                            $consulta= consultaComentario($conexion, $idProductos);
+                            while($fila=mysqli_fetch_array($consulta)){
+                        ?>
+                        <tr>
+                            <td><?php echo $fila['Usuario']  ?></td>
+                            <td><div style="width:400px; height:115px; overflow: auto;"><?php echo $fila['Comentario'] ?><div></td>
+                            <td><?php echo $fila['Valoracion'] ?>/10</td>
+                            <?php
+                                if($_SESSION['idUsuario'] == $fila['idUsuario']){
+                                    echo "<td><a href='./productos/eliminar/EliminarComentarios.php?idComentarios=".$fila["idComentarios"]."&idProducto=".$fila["idProducto"]."' 
+                                    class='btn btn-danger'  value='eliminar' name='eliminar' onclick='return ConfirmarEliminar()' ><i class='fa fa-trash'></i></a></td>";
+                                } else {
+                                    echo '';
+                                }
+                            ?>
+                        </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>        
+                <div>
+
             </div>
         </div>
         </main>
