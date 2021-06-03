@@ -8,6 +8,8 @@
     
 	$token = $_POST['token'];
 	$action = $_POST['action'];
+    $nusuario = $_POST["usuario"];
+    $npassword = $_POST["password"];
 	
 	$cu = curl_init();
 	curl_setopt($cu, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
@@ -24,15 +26,11 @@
     if($datos['success'] == 1 && $datos['score'] >= 0.5){
 		if($datos['action'] == 'validarUsuario'){
 
-            //Recogemos los valores del formulario.
-            $usuario = $_POST["usuario"];
-            $password = $_POST["password"];
-
             //Creamos la conexión a la BD.
             $conexion = conectar(true);
 
             //Lanzamos la consulta.
-            $consulta = consultaLogin($conexion, $usuario, $password);
+            $consulta = consultaLogin($conexion, $nusuario, $npassword);
 
             if(mysqli_num_rows($consulta) == 1){
 

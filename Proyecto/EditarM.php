@@ -1,8 +1,8 @@
 <?php
     session_start();
-    if (!$_SESSION['Rol']=="admin"){
+    if ($_SESSION['Rol']!="admin"){
         //Si el usuario ya esta logueado
-        header ('Location: ../index.php');
+        header ('Location: index.php');
         exit;
     }
 ?>

@@ -81,7 +81,7 @@
                     }   
                 ?>
                 <?php
-                    if($_SESSION['Rol']="admin" || $_SESSION['Rol']="usuario"){
+                    if($_SESSION['Rol']=="admin" || $_SESSION['Rol']=="usuario"){
                         echo '<form name="formulario" method="post" action="./productos/nuevo/nuevoComentario.php" id="loginform">
                         <div class="container row justify-content-center">
     
@@ -110,7 +110,7 @@
                         </div>
                     </form>';
                     } else {
-                        echo '';
+                        echo '<p>Media de valoraciones: '.$row->Valoracion.' </p>';
                     }
                 ?>
 
